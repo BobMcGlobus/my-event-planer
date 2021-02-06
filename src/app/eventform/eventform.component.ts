@@ -1,3 +1,4 @@
+import { AddEventService } from './../add-event.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EventformComponent implements OnInit {
 
-  constructor() { }
+  constructor(private addEventService: AddEventService) {
+
+  }
 
   ngOnInit(): void {
+    //this.getAll();
+  }
+
+  async add(title: string, startdate: Date, enddate: Date, location: string, description: string){
+    await this.addEventService.add(title, startdate, enddate, location, description);
   }
 
 }

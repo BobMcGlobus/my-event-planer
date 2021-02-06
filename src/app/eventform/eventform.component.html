@@ -3,14 +3,14 @@
   <form class="example-form">
     <mat-form-field class="example-full-width">
       <mat-label>Event Titel</mat-label>
-      <input matInput value="Titel">
+      <input matInput value="Titel" #titel>
     </mat-form-field>
 
     <mat-form-field appearance="fill" class="example-full-width">
       <mat-label>Enter a date range</mat-label>
       <mat-date-range-input [rangePicker]="picker">
-        <input matStartDate placeholder="Start date">
-        <input matEndDate placeholder="End date">
+        <input matStartDate placeholder="Start date" #startdate>
+        <input matEndDate placeholder="End date" #enddate>
       </mat-date-range-input>
       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-date-range-picker #picker></mat-date-range-picker>
@@ -18,12 +18,12 @@
 
     <mat-form-field class="example-full-width">
       <mat-label>Event Location</mat-label>
-      <input matInput value="Ort">
+      <input matInput value="Ort" #location>
     </mat-form-field>
 
     <mat-form-field class="example-full-width">
       <mat-label>Event Beschreibung</mat-label>
-      <textarea matInput value="Beschreibung"></textarea>
+      <textarea matInput value="Beschreibung" #description></textarea>
     </mat-form-field>
 
     <mat-radio-group class="category-container" aria-label="Wähle eine Kategorie">
@@ -33,9 +33,13 @@
       <mat-radio-button class="category-selector blue" value="blue"></mat-radio-button>
       <mat-radio-button class="category-selector green" value="green"></mat-radio-button>
     </mat-radio-group>
+
     <mat-checkbox>öffentliches Event</mat-checkbox>
+
     <div  id="formbutton">
-      <button mat-raised-button>Event speichern</button>
+      <button mat-raised-button
+      (click)="add(titel.value, startdate.value, enddate.value, location.value, description.value)"
+      >Event speichern</button>
     </div>
 
   </form>
