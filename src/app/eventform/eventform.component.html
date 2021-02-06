@@ -1,29 +1,42 @@
-<p>eventform works!</p>
-<form class="example-form">
-  <mat-form-field class="example-full-width">
-    <mat-label>Event Titel</mat-label>
-    <input matInput value="Titel">
-  </mat-form-field>
+<div id="form-card">
+  <h3>Neues Event hinzufügen</h3>
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Event Titel</mat-label>
+      <input matInput value="Titel">
+    </mat-form-field>
 
-  <mat-form-field appearance="fill">
-    <mat-label>Enter a date range</mat-label>
-    <mat-date-range-input [rangePicker]="picker">
-      <input matStartDate placeholder="Start date">
-      <input matEndDate placeholder="End date">
-    </mat-date-range-input>
-    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-    <mat-date-range-picker #picker></mat-date-range-picker>
-  </mat-form-field>
+    <mat-form-field appearance="fill" class="example-full-width">
+      <mat-label>Enter a date range</mat-label>
+      <mat-date-range-input [rangePicker]="picker">
+        <input matStartDate placeholder="Start date">
+        <input matEndDate placeholder="End date">
+      </mat-date-range-input>
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-date-range-picker #picker></mat-date-range-picker>
+    </mat-form-field>
 
-  <mat-form-field class="example-full-width">
-    <mat-label>Event Location</mat-label>
-    <input matInput value="Ort">
-  </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Event Location</mat-label>
+      <input matInput value="Ort">
+    </mat-form-field>
 
-  <mat-form-field class="example-full-width">
-    <mat-label>Event Beschreibung</mat-label>
-    <textarea matInput value="Beschreibung"></textarea>
-  </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Event Beschreibung</mat-label>
+      <textarea matInput value="Beschreibung"></textarea>
+    </mat-form-field>
 
-  <button mat-raised-button>Event Hinzufügen</button>
-</form>
+    <mat-radio-group class="category-container" aria-label="Wähle eine Kategorie">
+      <mat-radio-button class="category-selector orange" value="orange"></mat-radio-button>
+      <mat-radio-button class="category-selector red" value="red"></mat-radio-button>
+      <mat-radio-button class="category-selector purple" value="purple"></mat-radio-button>
+      <mat-radio-button class="category-selector blue" value="blue"></mat-radio-button>
+      <mat-radio-button class="category-selector green" value="green"></mat-radio-button>
+    </mat-radio-group>
+    <mat-checkbox>öffentliches Event</mat-checkbox>
+    <div  id="formbutton">
+      <button mat-raised-button>Event speichern</button>
+    </div>
+
+  </form>
+</div>
