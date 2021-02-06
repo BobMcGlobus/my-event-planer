@@ -1,0 +1,58 @@
+<!-- https://theeventscalendar.com/knowledgebase/k/the-events-calendar-rss-feed/ -->
+<!-- https://material.io/resources/icons/?icon=alarm&style=baseline -->
+
+<div class="event-item3" *ngFor="let event of eventList | async" >
+<mat-card>
+  <table>
+    <td style="background-color: aqua;"></td>
+    <td style="padding: 16px;">
+  <mat-card-header>
+    <mat-card-title>{{ event.title }}</mat-card-title>
+    <mat-card-subtitle>Konzert</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <p>{{ event.description | slice:0:150}}... <br><br></p>
+    <table>
+      <tbody>
+        <tr>
+          <td><mat-icon aria-hidden="false">alarm</mat-icon> {{ event.location }}</td>
+          <td><mat-icon aria-hidden="false">pin_drop</mat-icon> {{ event.date | date }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </mat-card-content>
+  <mat-card-actions align="start">
+    <button mat-button (click)="getDetail(event)">Get Details</button>
+  </mat-card-actions>
+  <mat-card-footer></mat-card-footer>
+</td>
+</table>
+</mat-card>
+</div>
+
+
+<!-- <div class="event-item" *ngFor="let event of eventList | async">
+  <span
+    ><strong>{{ event.title }}</strong></span
+  >
+  <br />
+  <span>{{ event.description }}</span>
+  <br />
+  <span>{{ event.date | date }}</span>
+  <br />
+  <span>{{ event.location }}</span>
+  <br />
+  <span><img src="{{ event.image }}" /></span>
+  <br />
+  <span>{{ event.participans }}</span>
+
+  <button (click)="getDetail(event)">More Please!</button>
+  <br /><br />
+</div> -->
+
+<!-- <h2>Aus DB</h2>
+<button (click)="addfromDB()">Add</button>
+<div class="event-item2" *ngFor="let event of events">
+  <span><strong>{{ event.title }}</strong></span>
+  <button (click)="getDetail(event)">More Please!</button>
+</div> -->

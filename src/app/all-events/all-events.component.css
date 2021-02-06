@@ -1,0 +1,40 @@
+.mat-body{
+background-color: blue;
+}
+
+.mat-card {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  border-radius: 1%;
+  padding: 0px;
+}
+
+.mat-card-subtitle {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.mat-card-actions, .mat-card-content {
+  display: block;
+  margin: 16px;
+}
+
+button {
+background-color: transparent;
+border: none;
+color: black;
+text-transform: uppercase;
+}
+
+button:focus{
+  background-color: transparent;
+  border: none;
+}
+
+td{
+  padding-right: 50px;
+}
+
