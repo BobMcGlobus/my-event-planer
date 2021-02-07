@@ -2,16 +2,13 @@
 <!-- https://material.io/resources/icons/?icon=alarm&style=baseline -->
 
 <mat-grid-list cols="2" rowHeight="">
-  <mat-grid-tile style="">
+  <mat-grid-tile>
     <div class="event-item3" *ngFor="let event of eventList | async">
-      <mat-card>
+      <mat-card id="click">
         <table>
           <td style="background-color: aqua"></td>
           <td style="padding: 16px">
             <mat-card-header>
-              <a routerLink="/events/detail">
-                <span class="badge">sss</span>
-              </a>
               <mat-card-title>{{ event.title }}</mat-card-title>
               <mat-card-subtitle>{{ event.type }}</mat-card-subtitle>
             </mat-card-header>
@@ -33,7 +30,7 @@
               </table>
             </mat-card-content>
             <mat-card-actions align="start">
-              <button mat-button (click)="getDetail(event)">Get Details</button>
+              <button mat-button (click)="getDetail(event)" id="get-detail">Get Details</button>
             </mat-card-actions>
             <mat-card-footer></mat-card-footer>
           </td>
@@ -42,27 +39,47 @@
     </div>
   </mat-grid-tile>
 
-  <mat-grid-tile style=""></mat-grid-tile>
+  <mat-grid-tile id ="detail-card" style="display: none;" >
+    <mat-card class="detail">
+
+      <div id="detail-image-wrapper">
+        <img matCardImage id="detail-image"src="Card wide image source" />
+      </div>
+
+      <mat-card-header>
+        <mat-card-title id="detail-title"></mat-card-title>
+        <mat-card-subtitle id="detail-subtitle" ></mat-card-subtitle>
+      </mat-card-header>
+
+      <table id="detail-table">
+        <tbody>
+          <tr>
+            <td class="data" >
+              <mat-icon aria-hidden="false">pin_drop</mat-icon><span>&nbsp;&nbsp;</span><span id="detail-location"></span>
+            </td>
+            <td class="data" >
+              <mat-icon aria-hidden="false">calendar_today</mat-icon><span>&nbsp;&nbsp;</span><span id="detail-date"></span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <mat-card-content id="detail-description"></mat-card-content>
+      <!-- <mat-card-actions align="start">
+        <button mat-button>Action1</button>
+      </mat-card-actions> -->
+      <!-- <mat-card-footer> Footer </mat-card-footer> -->
+    </mat-card>
+  </mat-grid-tile>
 </mat-grid-list>
 
-<!-- <div class="event-item" *ngFor="let event of eventList | async">
-  <span
-    ><strong>{{ event.title }}</strong></span
-  >
-  <br />
-  <span>{{ event.description }}</span>
-  <br />
-  <span>{{ event.date | date }}</span>
-  <br />
-  <span>{{ event.location }}</span>
-  <br />
-  <span><img src="{{ event.image }}" /></span>
-  <br />
-  <span>{{ event.participans }}</span>
 
-  <button (click)="getDetail(event)">More Please!</button>
-  <br /><br />
-</div> -->
+
+
+
+
+
+
 
 <!-- <h2>Aus DB</h2>
 <button (click)="addfromDB()">Add</button>
@@ -71,7 +88,4 @@
   <button (click)="getDetail(event)">More Please!</button>
 </div> -->
 
-<!-- <mat-grid-list cols="2" rowHeight="100px">
-  <mat-grid-tile><mat-icon aria-hidden="false">pin_drop</mat-icon> {{ event.location }}</mat-grid-tile>
-  <mat-grid-tile><mat-icon aria-hidden="false">calendar_today</mat-icon> {{ event.date | date:'short' }}</mat-grid-tile>
-</mat-grid-list> -->
+

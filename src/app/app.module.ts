@@ -18,6 +18,7 @@ import localeDe from '@angular/common/locales/de';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatGridListModule } from '@angular/material/grid-list';
+import {DatePipe} from '@angular/common'
 
 registerLocaleData(localeDe, 'de');
 
@@ -40,7 +41,7 @@ registerLocaleData(localeDe, 'de');
 
 
   ],
-  providers: [{ provide: LOCALE_ID, useValue: "de" }],
+  providers: [{ provide: LOCALE_ID, useValue: "de" }, DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

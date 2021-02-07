@@ -1,7 +1,8 @@
 import { EventService } from './../event.service';
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Event } from '../event'
+import { Event } from '../event';
+import {DatePipe} from '@angular/common'
 
 @Component({
   selector: 'app-all-events',
@@ -14,7 +15,7 @@ export class AllEventsComponent implements OnInit {
   public eventList: any;
   public eventDetail: any;
 
-  constructor(private http: HttpClient, private eventService: EventService) {}
+  constructor(private http: HttpClient, private eventService: EventService, private datePipe:DatePipe) {}
 
   ngOnInit(): void {
     this.getAll();
@@ -30,20 +31,37 @@ export class AllEventsComponent implements OnInit {
   }
 
   getDetail(event: Event) {
-    // console.log(event);
-    // this.eventDetail = event;
-    // window.location.replace('/events/detail');
-    // return this.eventDetail;
+    console.log(event);
+    this.eventDetail = event;
 
-    const headers = { 'content-type': 'application/json'}
-    const body = event;
-    console.log(body)
-    return this.http.post('/events/detail', body,{'headers':headers})
+    let title = document.getElementById('detail-title') as HTMLElement;
+    title.innerHTML = event.title;
 
+    let description = document.getElementById(
+      'detail-description'
+    ) as HTMLElement;
+    description.innerHTML = event.description;
+
+    let image = document.getElementById('detail-image') as HTMLImageElement;
+    image.src = event.image;
+
+    let subtitle = document.getElementById('detail-subtitle') as HTMLElement;
+    subtitle.innerHTML = event.type;
+
+    let location = document.getElementById('detail-location') as HTMLElement;
+    location.innerHTML = event.location;
+
+    let date = document.getElementById('detail-date') as HTMLElement;
+    let dateTime = this.datePipe.transform(event.date, 'short');
+    date.innerHTML = dateTime;
+
+    let card = document.getElementById('detail-card') as HTMLElement;
+    card.style.display = 'block';
   }
 
+
   // ++++++++++++++++++++++++++++++++++++++++++++
-  // wenn wir dummy date aus der DB wollen
+  // wenn wir dummy data aus der DB wollen
   // ++++++++++++++++++++++++++++++++++++++++++++
 
   // async getAllfromDB() {
@@ -55,5 +73,4 @@ export class AllEventsComponent implements OnInit {
   //   await this.eventService.addData();
   //   this.getAllfromDB();
   // }
-
 }

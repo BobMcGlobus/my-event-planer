@@ -58,6 +58,47 @@ table td .data
   height: 100%;
   padding: 0;
   margin: 0;
+  padding-top:0;
 }
+
+
+/* *********** */
+/* DETAIL */
+/* *********** */
+.mat-card.detail {
+  width: 70%;
+  margin: auto;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  border-radius: 1%;
+  padding: 16px;
+}
+
+.mat-card-footer {
+  display: block;
+  margin: 16px;
+}
+
+#detail-image-wrapper{
+  max-height: 15rem;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  position: relative;
+}
+
+#detail-image{
+  position: relative;
+  transform: translateY(-25%);
+}
+
+#detail-table{
+  margin-left: 16px;
+}
+
+
+
 
 

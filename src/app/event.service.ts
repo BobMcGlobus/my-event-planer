@@ -23,7 +23,8 @@ export class EventService extends Dexie {
   addData(): Promise<any> {
 
     return this.events.add(
-      { title: 'Papa Roach Concert',
+      { type: 'Concert',
+        title: 'Papa Roach Concert',
         description: 'Another journey chamber',
         date: "2021-03-19",
         location: 'SAP Arena',
