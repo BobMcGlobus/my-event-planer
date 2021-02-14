@@ -16,8 +16,8 @@ export class EventformComponent implements OnInit {
     //this.getAll();
   }
 
-  async add(title: string, startdate: Date, enddate: Date, location: string, description: string){
-    await this.addEventService.add(title, startdate, enddate, location, description);
+  async add(title: string, date: Date, location: string, description: string){
+    await this.addEventService.add(title, date, location, description);
   }
 
 }
