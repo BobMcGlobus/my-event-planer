@@ -4,7 +4,7 @@
 <mat-grid-list cols="2" rowHeight="">
   <mat-grid-tile>
     <div class="event-item3" *ngFor="let event of eventList | async">
-      <mat-card id="click">
+      <mat-card id="click" (click)="getDetail(event)">
         <table>
           <td style="background-color: aqua"></td>
           <td style="padding: 16px">
@@ -16,22 +16,19 @@
               <p>{{ event.description | slice: 0:150 }}... <br /><br /></p>
               <table>
                 <tbody>
-                  <tr>
-                    <td class="data">
-                      <mat-icon aria-hidden="false">pin_drop</mat-icon>
-                      {{ event.location }}
-                    </td>
-                    <td class="data">
-                      <mat-icon aria-hidden="false">calendar_today</mat-icon>
-                      {{ event.date | date: "short" }}
-                    </td>
-                  </tr>
+                <tr>
+                  <td class="data">
+                    <mat-icon aria-hidden="false">pin_drop</mat-icon>
+                    {{ event.location }}
+                  </td>
+                  <td class="data">
+                    <mat-icon aria-hidden="false">calendar_today</mat-icon>
+                    {{ event.date | date: "short" }}
+                  </td>
+                </tr>
                 </tbody>
               </table>
             </mat-card-content>
-            <mat-card-actions align="start">
-              <button mat-button (click)="getDetail(event)" id="get-detail">Get Details</button>
-            </mat-card-actions>
             <mat-card-footer></mat-card-footer>
           </td>
         </table>
@@ -53,14 +50,14 @@
 
       <table id="detail-table">
         <tbody>
-          <tr>
-            <td class="data" >
-              <mat-icon aria-hidden="false">pin_drop</mat-icon><span>&nbsp;&nbsp;</span><span id="detail-location"></span>
-            </td>
-            <td class="data" >
-              <mat-icon aria-hidden="false">calendar_today</mat-icon><span>&nbsp;&nbsp;</span><span id="detail-date"></span>
-            </td>
-          </tr>
+        <tr>
+          <td class="data" >
+            <mat-icon aria-hidden="false">pin_drop</mat-icon><span>&nbsp;&nbsp;</span><span id="detail-location"></span>
+          </td>
+          <td class="data" >
+            <mat-icon aria-hidden="false">calendar_today</mat-icon><span>&nbsp;&nbsp;</span><span id="detail-date"></span>
+          </td>
+        </tr>
         </tbody>
       </table>
 

@@ -12,7 +12,7 @@ export class EventService extends Dexie {
     super('EventDB');
 
     this.version(1).stores({
-      events: "++id, date, location, participans",
+      events: '++id, date, location, participans',
     });
   }
 

@@ -1,8 +1,8 @@
-import { EventService } from './../event.service';
+import { EventService } from '../event.service';
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Event } from '../event';
-import {DatePipe} from '@angular/common'
+import {DatePipe} from '@angular/common';
 
 @Component({
   selector: 'app-all-events',
@@ -15,47 +15,47 @@ export class AllEventsComponent implements OnInit {
   public eventList: any;
   public eventDetail: any;
 
-  constructor(private http: HttpClient, private eventService: EventService, private datePipe:DatePipe) {}
+  constructor(private http: HttpClient, private eventService: EventService, private datePipe: DatePipe) {}
 
   ngOnInit(): void {
     this.getAll();
     // this.getAllfromDB();
   }
 
-  async getAll() {
+  getAll(): void{
     this.eventList = this.getAllEventsFromJSON();
   }
 
-  getAllEventsFromJSON() {
+  getAllEventsFromJSON(): any{
     return this.http.get('/assets/events/events.json');
   }
 
-  getDetail(event: Event) {
+  getDetail(event: Event): void{
     console.log(event);
     this.eventDetail = event;
 
-    let title = document.getElementById('detail-title') as HTMLElement;
+    const title = document.getElementById('detail-title') as HTMLElement;
     title.innerHTML = event.title;
 
-    let description = document.getElementById(
+    const description = document.getElementById(
       'detail-description'
     ) as HTMLElement;
     description.innerHTML = event.description;
 
-    let image = document.getElementById('detail-image') as HTMLImageElement;
+    const image = document.getElementById('detail-image') as HTMLImageElement;
     image.src = event.image;
 
-    let subtitle = document.getElementById('detail-subtitle') as HTMLElement;
+    const subtitle = document.getElementById('detail-subtitle') as HTMLElement;
     subtitle.innerHTML = event.type;
 
-    let location = document.getElementById('detail-location') as HTMLElement;
+    const location = document.getElementById('detail-location') as HTMLElement;
     location.innerHTML = event.location;
 
-    let date = document.getElementById('detail-date') as HTMLElement;
-    let dateTime = this.datePipe.transform(event.date, 'short');
+    const date = document.getElementById('detail-date') as HTMLElement;
+    const dateTime = this.datePipe.transform(event.date, 'short');
     date.innerHTML = dateTime;
 
-    let card = document.getElementById('detail-card') as HTMLElement;
+    const card = document.getElementById('detail-card') as HTMLElement;
     card.style.display = 'block';
   }
 

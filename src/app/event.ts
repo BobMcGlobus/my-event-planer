@@ -1,10 +1,12 @@
+import {DateRange} from '@angular/material/datepicker';
+
 export class Event {
-  id: string;
+  id?: number;
   title: string;
-  date: Date;
+  date: DateRange<any>;
   location: string;
   description: string;
-  category: string
+  category: string;
   image: string;
   type: string;
 }

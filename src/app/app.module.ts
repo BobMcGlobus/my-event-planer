@@ -34,7 +34,8 @@ import localeDe from '@angular/common/locales/de';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatGridListModule } from '@angular/material/grid-list';
-import {DatePipe} from '@angular/common'
+import {DatePipe} from '@angular/common';
+import { PersonalEventsComponent } from './personal-events/personal-events.component'
 
 registerLocaleData(localeDe, 'de');
 
@@ -45,7 +46,8 @@ registerLocaleData(localeDe, 'de');
     EventformComponent,
     AllEventsComponent,
     DeleteEventComponent,
-    DetailEventComponent
+    DetailEventComponent,
+    PersonalEventsComponent
   ],
   imports: [
     BrowserModule,
