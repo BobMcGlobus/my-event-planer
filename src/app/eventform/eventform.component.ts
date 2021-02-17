@@ -17,8 +17,8 @@ selectedValue = '';
     //this.getAll();
   }
 
-  async add(title: string, date: Date, location: string, description: string, category: string){
-    await this.addEventService.add(title, date, location, description, category);
+  async add(title: string, date: Date, location: string, description: string, category: string, image:string, type:string){
+    await this.addEventService.add(title, date, location, description, category, image, type);
   }
 
 }

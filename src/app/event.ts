@@ -5,6 +5,8 @@ export class Event {
   location: string;
   description: string;
   category: string
+  image: string;
+  type: string;
 }
 
 // id?: number;

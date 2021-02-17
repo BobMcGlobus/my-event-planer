@@ -20,18 +20,18 @@ export class EventService extends Dexie {
     return this.events.toArray();
   }
 
-  addData(): Promise<any> {
+  // addData(): Promise<any> {
 
-    return this.events.add(
-      { type: 'Concert',
-        title: 'Papa Roach Concert',
-        description: 'Another journey chamber',
-        date: "2021-03-19",
-        location: 'SAP Arena',
-        image: 'assets/icons/icon-72x72.png',
-        participans: ['ON19'],
-        visited: false,
-      }
-    );
-  }
+  //   return this.events.add(
+  //     { type: 'Concert',
+  //       title: 'Papa Roach Concert',
+  //       description: 'Another journey chamber',
+  //       date: "2021-03-19",
+  //       location: 'SAP Arena',
+  //       image: 'assets/icons/icon-72x72.png',
+  //       participans: ['ON19'],
+  //       visited: false,
+  //     }
+  //   );
+  // }
 }
