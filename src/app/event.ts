@@ -4,4 +4,5 @@ export class Event {
   date: Date;
   location: string;
   description: string;
+  category: string
 }

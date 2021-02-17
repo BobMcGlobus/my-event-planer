@@ -7,17 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./eventform.component.css']
 })
 export class EventformComponent implements OnInit {
-
+selectedValue = '';
   constructor(private addEventService: AddEventService) {
 
   }
+
 
   ngOnInit(): void {
     //this.getAll();
   }
 
-  async add(title: string, date: Date, location: string, description: string){
-    await this.addEventService.add(title, date, location, description);
+  async add(title: string, date: Date, location: string, description: string, category: string){
+    await this.addEventService.add(title, date, location, description, category);
   }
 
 }
