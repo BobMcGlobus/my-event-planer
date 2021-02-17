@@ -1,0 +1,55 @@
+<div id="form-card">
+  <h3>Neues Event hinzufügen</h3>
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Event Titel</mat-label>
+      <input matInput #titel required>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="example-full-width">
+      <mat-label>Enter a date range</mat-label>
+      <mat-date-range-input [rangePicker]="picker" #date>
+        <input matStartDate placeholder="Start date">
+        <input matEndDate placeholder="End date">
+      </mat-date-range-input>
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-date-range-picker #picker></mat-date-range-picker>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Event Location</mat-label>
+      <input matInput #location required>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Event Description</mat-label>
+      <textarea matInput #description required></textarea>
+    </mat-form-field>
+<!--
+    <mat-radio-group class="category-container" aria-label="Wähle eine Kategorie">
+      <mat-radio-button class="category-selector orange" value="orange"></mat-radio-button>
+      <mat-radio-button class="category-selector red" value="red"></mat-radio-button>
+      <mat-radio-button class="category-selector purple" value="purple"></mat-radio-button>
+      <mat-radio-button class="category-selector blue" value="blue"></mat-radio-button>
+      <mat-radio-button class="category-selector green" value="green"></mat-radio-button>
+    </mat-radio-group> -->
+
+    <mat-form-field appearance="fill">
+      <mat-label>Choose a category</mat-label>
+      <mat-select [(value)]="selectedValue">
+        <mat-option value="other">Other</mat-option>
+        <mat-option value="birthday">Birthday</mat-option>
+        <mat-option value="outdoor">Outdoor</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-checkbox>puplic Event</mat-checkbox>
+
+    <div  id="formbutton">
+      <button mat-raised-button
+      (click)="add(titel.value, date.value, location.value, description.value, selectedValue)"
+      >Save Event</button>
+    </div>
+
+  </form>
+</div>
