@@ -5,8 +5,10 @@
       [opened]="(isHandset$ | async) === false">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
+      <a mat-list-item routerLink="">Home</a>
       <a mat-list-item routerLink="">Dashboard</a>
-      <a mat-list-item routerLink="new">Neues Event</a>
+      <a mat-list-item routerLink="new">Overview</a>
+      <a mat-list-item routerLink="new">Create Event</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
