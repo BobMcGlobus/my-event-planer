@@ -6,7 +6,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  {path: 'new', component: EventformComponent},
+  {path: 'events/new', component: EventformComponent},
   {path:'events/all', component: AllEventsComponent},
   {path:'events/delete', component: DeleteEventComponent},
   {path:'events/detail', component: DetailEventComponent}
