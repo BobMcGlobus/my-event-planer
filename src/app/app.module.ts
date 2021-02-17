@@ -16,11 +16,29 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatSelectModule} from '@angular/material/select';
 
 
+import { AllEventsComponent } from './all-events/all-events.component';
+import { DeleteEventComponent } from './delete-event/delete-event.component';
+import { DetailEventComponent } from './detail-event/detail-event.component';
+
+// Kate
+import { HttpClientModule } from '@angular/common/http';
+import { LOCALE_ID } from '@angular/core';
+import { registerLocaleData } from '@angular/common';
+import localeDe from '@angular/common/locales/de';
+import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
+import { MatGridListModule } from '@angular/material/grid-list';
+import {DatePipe} from '@angular/common'
+
+registerLocaleData(localeDe, 'de');
 
 @NgModule({
   declarations: [
     AppComponent,
-    EventformComponent
+    EventformComponent,
+    AllEventsComponent,
+    DeleteEventComponent,
+    DetailEventComponent
   ],
   imports: [
     BrowserModule,
@@ -33,9 +51,15 @@ import {MatSelectModule} from '@angular/material/select';
     MatButtonModule,
     MatRadioModule,
     MatCheckboxModule,
-    MatSelectModule
+    MatSelectModule,
+    HttpClientModule,
+    MatCardModule,
+    MatIconModule,
+    MatGridListModule
+
+
   ],
-  providers: [],
+  providers: [{ provide: LOCALE_ID, useValue: "de" }, DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule {
