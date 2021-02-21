@@ -1,7 +1,5 @@
-<!-- https://theeventscalendar.com/knowledgebase/k/the-events-calendar-rss-feed/ -->
-<!-- https://material.io/resources/icons/?icon=alarm&style=baseline -->
 
-<mat-grid-list cols="2" rowHeight="">
+<mat-grid-list cols="2" rowHeight="100%">
   <mat-grid-tile>
     <div class="event-item3" *ngFor="let event of events">
       <mat-card id="click" (click)="getDetail(event)">
@@ -73,19 +71,5 @@
   </mat-grid-tile>
 </mat-grid-list>
 
-
-
-
-
-
-
-
-
-<!-- <h2>Aus DB</h2>
-<button (click)="addfromDB()">Add</button>
-<div class="event-item2" *ngFor="let event of events">
-  <span><strong>{{ event.title }}</strong></span>
-  <button (click)="getDetail(event)">More Please!</button>
-</div> -->
 
 
