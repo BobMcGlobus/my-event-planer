@@ -6,15 +6,15 @@
       <input matInput #titel required>
     </mat-form-field>
 
-    <mat-form-field appearance="fill" class="example-full-width">
-      <mat-label>Enter a date range</mat-label>
-      <mat-date-range-input [rangePicker]="picker" #date>
-        <input matStartDate placeholder="Start date">
-        <input matEndDate placeholder="End date">
-      </mat-date-range-input>
-      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-      <mat-date-range-picker #picker></mat-date-range-picker>
-    </mat-form-field>
+    <div>
+      <mat-label>Startdate and -time</mat-label>
+      <ejs-datetimepicker #start></ejs-datetimepicker>
+    </div>
+
+    <div>
+      <mat-label>Enddate and -time</mat-label>
+      <ejs-datetimepicker #end></ejs-datetimepicker>
+    </div>
 
     <mat-form-field class="example-full-width">
       <mat-label>Event Location</mat-label>
@@ -30,16 +30,19 @@
       <mat-label>Choose a category</mat-label>
       <mat-select [(value)]="selectedValue">
         <mat-option value="other">Other</mat-option>
-        <mat-option value="birthday">Birthday</mat-option>
-        <mat-option value="outdoor">Outdoor</mat-option>
+        <mat-option value="party">Party</mat-option>
+        <mat-option value="activity">Activity</mat-option>
+        <mat-option value="trip">Trip</mat-option>
+        <mat-option value="private">Private</mat-option>
+        <mat-option value="external" disabled>External</mat-option>
       </mat-select>
     </mat-form-field>
 
-    <mat-checkbox>puplic Event</mat-checkbox>
+    <!-- <mat-checkbox>puplic Event</mat-checkbox> -->
 
     <div  id="formbutton">
-      <button mat-raised-button>
-<!--      (click)="add(titel.value, date.value, location.value, description.value, selectedValue, 'test-image', 'test-type')"-->
+      <button mat-raised-button
+      (click)="add(titel.value, start.value, end.value, location.value, description.value, selectedValue, 'test-image', 'test-type')"
       >Save Event</button>
     </div>
 

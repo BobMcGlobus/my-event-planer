@@ -7,18 +7,19 @@ import {v4 as uuidv4} from 'uuid';
   providedIn: 'root'
 })
 export class AddEventService extends Dexie {
-  events: Dexie.Table<Event, number>;
+  events: Dexie.Table<Event, string>;
   constructor() {
-    super('EventDatabase2');
+    super('EventDatabase');
     this.version(1).stores({
-      events: '++id, date, location'
+      events: 'id'
     });
 
    }
 
-    add(title: string, date: Date, location: string, description: string, category: string, image: string, type: string): Promise<any>{
-      // const id: string = uuidv4();
-      return this.events.add({title, date, location, description, category, image, type});
+    add(title: string, start: Date, end: Date, location: string, description: string, category: string, image:string, type:string): Promise<any>{
+      const id: string = uuidv4();
+
+      return this.events.add({id, title, start, end, location, description, category, image, type});
     }
 
     getAll(): Promise<Event[]>{
