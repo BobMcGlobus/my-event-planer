@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Event } from '../event';
 import {DatePipe} from '@angular/common';
+import { AddEventService } from '../add-event.service';
 
 @Component({
   selector: 'app-all-events',
@@ -13,21 +14,22 @@ export class AllEventsComponent implements OnInit {
   // todo Kommentare und nicht verwendetete Variablen entfernen
   events: Event[] = [];
   public eventList: any;
-  public eventDetail: any;
+  public eventDetail: Event;
 
-  constructor(private http: HttpClient, private eventService: EventService, private datePipe: DatePipe) {}
+  constructor(private http: HttpClient,
+              private eventService: EventService,
+              private datePipe: DatePipe,
+              private addEventService: AddEventService) {}
 
   ngOnInit(): void {
-    this.getAll();
-    // this.getAllfromDB();
+    // this.eventService.addData();
+    this.getAllfromDB();
+    // this.getAll();
   }
 
-  getAll(): void{
-    this.eventList = this.getAllEventsFromJSON();
-  }
-
-  getAllEventsFromJSON(): any{
-    return this.http.get('/assets/events/events.json');
+  async getAllfromDB(): Promise<any>{
+    this.events = await this.eventService.getAll();
+    console.log(this.eventList);
   }
 
   getDetail(event: Event): void{
@@ -51,12 +53,24 @@ export class AllEventsComponent implements OnInit {
     const location = document.getElementById('detail-location') as HTMLElement;
     location.innerHTML = event.location;
 
-    // const date = document.getElementById('detail-date') as HTMLElement;
-    // const dateTime = this.datePipe.transform(event.date, 'short');
-    // date.innerHTML = dateTime;
+    const date = document.getElementById('detail-date') as HTMLElement;
+    const dateTime = this.datePipe.transform(event.start, 'short');
+    date.innerHTML = dateTime;
+    if (event.end){
+      const dateEnd = document.getElementById('detail-date-end') as HTMLElement;
+      const dateTimeEnd = this.datePipe.transform(event.start, 'short');
+      dateEnd.innerHTML = ' - ' + dateTimeEnd;
+    }
 
     const card = document.getElementById('detail-card') as HTMLElement;
     card.style.display = 'block';
+  }
+
+  async addToPersonalEvents(id): Promise<any>{
+    await this.eventService.events.get(id).then(e => {
+      console.log(e.start);
+      this.addEventService.add(e.title, e.start, e.end, e.location, e.description, e.category, e.image, e.type);
+    });
   }
 
 
@@ -72,5 +86,13 @@ export class AllEventsComponent implements OnInit {
   // async addfromDB() {
   //   await this.eventService.addData();
   //   this.getAllfromDB();
+  // }
+
+  // getAll(): void{
+  //   this.eventList = this.getAllEventsFromJSON();
+  // }
+
+  // getAllEventsFromJSON(): any{
+  //   return this.http.get('/assets/events/events.json');
   // }
 }

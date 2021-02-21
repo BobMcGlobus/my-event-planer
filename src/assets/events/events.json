@@ -1,16 +1,15 @@
 [
   {
-    "id" : 1,
     "type" : "Concert",
     "title": "Papa Roach Concert",
+    "start": "2021-03-19T18:25",
+    "end": "2021-03-19T18:25",
     "description": "Another journey chamber way yet females man. Way extensive and dejection get delivered deficient sincerity gentleman age. Too end instrument possession contrasted motionless. Calling offence six joy feeling. Coming merits and was talent enough far. Sir joy northward sportsmen education. Discovery incommode earnestly no he commanded if. Put still any about manor heard. ",
-    "date": "2021-03-19T18:25",
     "location": "SAP Arena",
     "image": "assets/icons/icon-72x72.png",
     "participans": ["ON19"]
   },
   {
-    "id" : 2,
     "type" : "Comedy Show",
     "title": "Felix Lobrecht",
     "description": "In it except to so temper mutual tastes mother. Interested cultivated its continuing now yet are. Out interested acceptance our partiality affronting unpleasant why add. Esteem garden men yet shy course. Consulted up my tolerably sometimes perpetual oh. Expression acceptance imprudence particular had eat unsatiable. ",
@@ -20,7 +19,6 @@
     "participans": ["Kate, Tim"]
   },
   {
-    "id" : 3,
     "type" : "Epic Event",
     "title": "Mars Landing",
     "description": "Article nor prepare chicken you him now. Shy merits say advice ten before lovers innate add. She cordially behaviour can attempted estimable. Trees delay fancy noise manor do as an small. Felicity now law securing breeding likewise extended and. Roused either who favour why ham.  ",
@@ -30,7 +28,6 @@
     "participans": []
   },
   {
-    "id" : 4,
     "type" : "Epic Event",
     "title": "Mars Landing",
     "description": "Article nor prepare chicken you him now. Shy merits say advice ten before lovers innate add. She cordially behaviour can attempted estimable. Trees delay fancy noise manor do as an small. Felicity now law securing breeding likewise extended and. Roused either who favour why ham.  ",
@@ -40,7 +37,6 @@
     "participans": []
   },
   {
-    "id" : 5,
     "type" : "Epic Event",
     "title": "Mars Landing",
     "description": "Article nor prepare chicken you him now. Shy merits say advice ten before lovers innate add. She cordially behaviour can attempted estimable. Trees delay fancy noise manor do as an small. Felicity now law securing breeding likewise extended and. Roused either who favour why ham.  ",

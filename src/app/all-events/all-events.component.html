@@ -3,7 +3,7 @@
 
 <mat-grid-list cols="2" rowHeight="">
   <mat-grid-tile>
-    <div class="event-item3" *ngFor="let event of eventList | async">
+    <div class="event-item3" *ngFor="let event of events">
       <mat-card id="click" (click)="getDetail(event)">
         <table>
           <td style="background-color: aqua"></td>
@@ -23,7 +23,10 @@
                   </td>
                   <td class="data">
                     <mat-icon aria-hidden="false">calendar_today</mat-icon>
-                    {{ event.date | date: "short" }}
+                    {{ event.start | date: "short" }}
+                    <div *ngIf="event.end">
+                      - {{ event.end | date: "short" }}
+                    </div>
                   </td>
                 </tr>
                 </tbody>
@@ -40,11 +43,11 @@
     <mat-card class="detail">
 
       <div id="detail-image-wrapper">
-        <img matCardImage id="detail-image"src="Card wide image source" />
+        <img matCardImage id="detail-image"src="" #image/>
       </div>
 
       <mat-card-header>
-        <mat-card-title id="detail-title"></mat-card-title>
+        <mat-card-title id="detail-title" #titel></mat-card-title>
         <mat-card-subtitle id="detail-subtitle" ></mat-card-subtitle>
       </mat-card-header>
 
@@ -52,19 +55,19 @@
         <tbody>
         <tr>
           <td class="data" >
-            <mat-icon aria-hidden="false">pin_drop</mat-icon><span>&nbsp;&nbsp;</span><span id="detail-location"></span>
+            <mat-icon aria-hidden="false">pin_drop</mat-icon><span>&nbsp;&nbsp;</span><span id="detail-location" #location></span>
           </td>
           <td class="data" >
-            <mat-icon aria-hidden="false">calendar_today</mat-icon><span>&nbsp;&nbsp;</span><span id="detail-date"></span>
+            <mat-icon aria-hidden="false">calendar_today</mat-icon><span>&nbsp;&nbsp;</span><span id="detail-date" #start></span><span id="detail-date-end" #end></span>
           </td>
         </tr>
         </tbody>
       </table>
 
-      <mat-card-content id="detail-description"></mat-card-content>
-      <!-- <mat-card-actions align="start">
-        <button mat-button>Action1</button>
-      </mat-card-actions> -->
+      <mat-card-content id="detail-description" #description></mat-card-content>
+       <mat-card-actions align="start">
+         <button (click)="addToPersonalEvents(eventDetail.id)">Add</button>
+      </mat-card-actions>
       <!-- <mat-card-footer> Footer </mat-card-footer> -->
     </mat-card>
   </mat-grid-tile>
