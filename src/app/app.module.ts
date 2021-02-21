@@ -35,6 +35,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatGridListModule } from '@angular/material/grid-list';
 import {DatePipe} from '@angular/common'
+import { DateTimePickerModule } from '@syncfusion/ej2-angular-calendars';
 
 registerLocaleData(localeDe, 'de');
 
@@ -70,9 +71,8 @@ registerLocaleData(localeDe, 'de');
     HttpClientModule,
     MatCardModule,
     MatIconModule,
-    MatGridListModule
-
-
+    MatGridListModule,
+    DateTimePickerModule
   ],
   providers: [{ provide: LOCALE_ID, useValue: "de" }, DatePipe],
   bootstrap: [AppComponent]

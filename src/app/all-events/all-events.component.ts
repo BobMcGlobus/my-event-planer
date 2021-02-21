@@ -52,7 +52,7 @@ export class AllEventsComponent implements OnInit {
     location.innerHTML = event.location;
 
     let date = document.getElementById('detail-date') as HTMLElement;
-    let dateTime = this.datePipe.transform(event.date, 'short');
+    let dateTime = this.datePipe.transform(event.start, 'short');
     date.innerHTML = dateTime;
 
     let card = document.getElementById('detail-card') as HTMLElement;
