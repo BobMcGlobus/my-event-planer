@@ -16,10 +16,11 @@ export class AddEventService extends Dexie {
 
    }
 
-    add(title: string, start: Date, end: Date, location: string, description: string, category: string, image:string, type:string): Promise<any>{
-      const id: string = uuidv4();
+    add(title: string,
+        start: Date, end: Date, location: string, description: string, category: string, image: string, type: string): Promise<any>{
+      // const id: string = uuidv4();
 
-      return this.events.add({id, title, start, end, location, description, category, image, type});
+      return this.events.add({title, start, end, location, description, category, image, type});
     }
 
     getAll(): Promise<Event[]>{
