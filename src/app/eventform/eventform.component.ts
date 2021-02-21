@@ -18,15 +18,15 @@ selectedValue = '';
     // this.getAll();
   }
 
-  async add(title: string,
-            date: DateRange<any>,
-            location: string,
-            description: string,
-            category: string,
-            image: string,
-            type: string): Promise<any>{
-    console.log(date);
-    await this.addEventService.add(title, date , location, description, category, image, type);
-  }
+  // async add(title: string,
+  //           date: DateRange<any>,
+  //           location: string,
+  //           description: string,
+  //           category: string,
+  //           image: string,
+  //           type: string): Promise<any>{
+  //   console.log(date);
+  //   await this.addEventService.add(title, date , location, description, category, image, type);
+  // }
 
 }

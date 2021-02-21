@@ -3,7 +3,7 @@ import {DateRange} from '@angular/material/datepicker';
 export class Event {
   id?: number;
   title: string;
-  date: DateRange<any>;
+  date: Date;
   location: string;
   description: string;
   category: string;

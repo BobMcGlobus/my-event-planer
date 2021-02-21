@@ -51,9 +51,9 @@ export class AllEventsComponent implements OnInit {
     const location = document.getElementById('detail-location') as HTMLElement;
     location.innerHTML = event.location;
 
-    const date = document.getElementById('detail-date') as HTMLElement;
-    const dateTime = this.datePipe.transform(event.date, 'short');
-    date.innerHTML = dateTime;
+    // const date = document.getElementById('detail-date') as HTMLElement;
+    // const dateTime = this.datePipe.transform(event.date, 'short');
+    // date.innerHTML = dateTime;
 
     const card = document.getElementById('detail-card') as HTMLElement;
     card.style.display = 'block';

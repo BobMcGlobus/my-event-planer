@@ -35,7 +35,6 @@ import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatGridListModule } from '@angular/material/grid-list';
 import {DatePipe} from '@angular/common';
-import { PersonalEventsComponent } from './personal-events/personal-events.component'
 
 registerLocaleData(localeDe, 'de');
 
@@ -47,7 +46,6 @@ registerLocaleData(localeDe, 'de');
     AllEventsComponent,
     DeleteEventComponent,
     DetailEventComponent,
-    PersonalEventsComponent
   ],
   imports: [
     BrowserModule,
@@ -76,7 +74,7 @@ registerLocaleData(localeDe, 'de');
 
 
   ],
-  providers: [{ provide: LOCALE_ID, useValue: "de" }, DatePipe],
+  providers: [{ provide: LOCALE_ID, useValue: 'de' }, DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule {
