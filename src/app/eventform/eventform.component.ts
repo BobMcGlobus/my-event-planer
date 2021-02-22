@@ -31,7 +31,7 @@ selectedValue = '';
     if(title.length != 0 && start.getDate != null && end.getDate != null){
         await this.addEventService.add(title, start, end, location, description, category, '');}
     else{
-        alert('Bitte Felder ausfüllen');
+        console.log('Please check if there is an input missing!');
     }
   }
 
