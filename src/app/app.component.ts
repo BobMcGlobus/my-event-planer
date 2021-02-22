@@ -1,4 +1,6 @@
+import { OnInit } from '@angular/core';
 import { Component } from '@angular/core';
+import { SwUpdate } from '@angular/service-worker';
 
 
 @Component({
@@ -6,23 +8,25 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+
+export class AppComponent implements OnInit {
   title = 'my-event-planer';
 
-  /*
-  install() {
-    // Hide the app provided install promotion
-    hideInstallPromotion();
-    // Show the install prompt
-    deferredPrompt.prompt();
-    // Wait for the user to respond to the prompt
-    const { outcome } = await deferredPrompt.userChoice;
-    // Optionally, send analytics event with outcome of user choice
-    console.log(User response to the install prompt: ${outcome});
-    // We've used the prompt, and can't use it again, throw it away
-    deferredPrompt = null;
-  };
-  */
+  constructor(private swUpdate: SwUpdate) {}
+
+  ngOnInit() {
+    if (this.swUpdate.isEnabled) {
+      this.swUpdate.available.subscribe((e) => {
+        const updateApp = window.confirm(`
+          Update available.
+          Do you want to install it?
+        `);
+        if (updateApp) { window.location.reload(); }
+      });
+    }
+  }
 }
+
+
 
 
