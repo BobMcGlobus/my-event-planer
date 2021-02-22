@@ -78,7 +78,7 @@ export class PersonalEventsComponent implements OnInit {
     card.style.display = 'block';
   }
 
-  delete(id: number): void{
+  delete(id: string): void{
     if (confirm('Are you sure, you want to delete this event?')){
       this.addEventService.events.delete(id);
       const card = document.getElementById('detail-card') as HTMLElement;

@@ -41,11 +41,11 @@
     <mat-card class="detail">
 
       <div id="detail-image-wrapper">
-        <img matCardImage id="detail-image"src="" #image/>
+        <img matCardImage id="detail-image"src=""/>
       </div>
 
       <mat-card-header>
-        <mat-card-title id="detail-title" #titel></mat-card-title>
+        <mat-card-title id="detail-title"></mat-card-title>
         <mat-card-subtitle id="detail-subtitle" ></mat-card-subtitle>
       </mat-card-header>
 
@@ -53,20 +53,19 @@
         <tbody>
         <tr>
           <td class="data" >
-            <mat-icon aria-hidden="false">pin_drop</mat-icon><span>&nbsp;&nbsp;</span><span id="detail-location" #location></span>
+            <mat-icon aria-hidden="false">pin_drop</mat-icon><span>&nbsp;&nbsp;</span><span id="detail-location"></span>
           </td>
           <td class="data" >
-            <mat-icon aria-hidden="false">calendar_today</mat-icon><span>&nbsp;&nbsp;</span><span id="detail-date" #start></span><span id="detail-date-end" #end></span>
+            <mat-icon aria-hidden="false">calendar_today</mat-icon><span>&nbsp;&nbsp;</span><span id="detail-date"></span><span id="detail-date-end" #end></span>
           </td>
         </tr>
         </tbody>
       </table>
 
-      <mat-card-content id="detail-description" #description></mat-card-content>
+      <mat-card-content id="detail-description"></mat-card-content>
        <mat-card-actions align="start">
-         <button (click)="addToPersonalEvents(eventDetail.id)">Add</button>
+         <button (click)="addToPersonalEvents(eventDetail.id)">Add to personal Eventlist</button>
       </mat-card-actions>
-      <!-- <mat-card-footer> Footer </mat-card-footer> -->
     </mat-card>
   </mat-grid-tile>
 </mat-grid-list>

@@ -22,14 +22,11 @@ export class AllEventsComponent implements OnInit {
               private addEventService: AddEventService) {}
 
   ngOnInit(): void {
-    // this.eventService.addData();
-    this.getAllfromDB();
-    // this.getAll();
+    this.eventService.addData().then(() => this.getAllfromDB());
   }
 
   async getAllfromDB(): Promise<any>{
     this.events = await this.eventService.getAll();
-    console.log(this.eventList);
   }
 
   getDetail(event: Event): void{

@@ -1,7 +1,7 @@
 import {DateRange} from '@angular/material/datepicker';
 
 export class Event {
-  id?: number;
+  id: string;
   title: string;
   start: Date;
   end?: Date;
