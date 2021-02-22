@@ -29,7 +29,7 @@ selectedValue = '';
         category = 'other';
     }
 
-    if(title.length != 0 && start.getDate != null && end.getDate != null){
+    if(title.length != 0 && start.getDate != null && location.length != 0){
         await this.addEventService.add(title, start, end, location, description, category, '');
         }
     else{
