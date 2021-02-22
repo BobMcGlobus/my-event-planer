@@ -23,7 +23,16 @@ selectedValue = '';
             location: string,
             description: string,
             category: string): Promise<any>{
-    await this.addEventService.add(title, start, end, location, description, category, '');
+
+    if (category.length == 0){
+        category = 'other';
+    }
+
+    if(title.length != 0 && start.getDate != null && end.getDate != null){
+        await this.addEventService.add(title, start, end, location, description, category, '');}
+    else{
+        alert('Bitte Felder ausfüllen');
+    }
   }
 
 }
