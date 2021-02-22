@@ -3,22 +3,22 @@
   <form class="example-form">
     <mat-form-field class="example-full-width">
       <mat-label>Event Titel</mat-label>
-      <input matInput #titel required>
+      <input matInput class="required" #titel required>
     </mat-form-field>
 
     <div>
       <mat-label>Startdate and -time</mat-label>
-      <ejs-datetimepicker #start></ejs-datetimepicker>
+      <ejs-datetimepicker class="required" #start></ejs-datetimepicker>
     </div>
 
     <div>
       <mat-label>Enddate and -time</mat-label>
-      <ejs-datetimepicker #end></ejs-datetimepicker>
+      <ejs-datetimepicker class="required" #end></ejs-datetimepicker>
     </div>
 
     <mat-form-field class="example-full-width">
       <mat-label>Event Location</mat-label>
-      <input matInput #location required>
+      <input matInput class="required" #location required>
     </mat-form-field>
 
     <mat-form-field class="example-full-width">
@@ -29,7 +29,7 @@
     <mat-form-field appearance="fill">
       <mat-label>Choose a category</mat-label>
       <mat-select [(value)]="selectedValue">
-        <mat-option value="other">Other</mat-option>
+        <mat-option value="other" selected>Other</mat-option>
         <mat-option value="party">Party</mat-option>
         <mat-option value="activity">Activity</mat-option>
         <mat-option value="trip">Trip</mat-option>
