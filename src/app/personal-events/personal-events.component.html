@@ -4,7 +4,7 @@
     <div class="event-item3" *ngFor="let event of privateEvent | async">
       <mat-card id="click" (click)="getDetail(event)">
         <table>
-          <td *ngIf="event.type == 'test-type'" style="background-color: aqua" #type></td>
+          <td *ngIf="event.type == 'test-type'" style="background-color: #605061" #type></td>
           <td *ngIf="event.type == 'trip'" style="background-color: #4F5F21" ></td>
           <td *ngIf="event.type == 'activity'" style="background-color: #21485F" ></td>
           <td *ngIf="event.type == 'other'" style="background-color: #E9B17D" ></td>
