@@ -1,5 +1,6 @@
 import { AddEventService } from '../add-event.service';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-eventform',
@@ -23,7 +24,17 @@ selectedValue = '';
             location: string,
             description: string,
             category: string): Promise<any>{
-    await this.addEventService.add(title, start, end, location, description, category, '');
+
+    if (category.length == 0){
+        category = 'other';
+    }
+
+    if(title.length != 0 && start.getDate != null && end.getDate != null){
+        await this.addEventService.add(title, start, end, location, description, category, '');
+        }
+    else{
+        console.log('Please check if there is an input missing!');
+    }
   }
 
 }

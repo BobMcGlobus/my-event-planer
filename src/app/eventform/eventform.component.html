@@ -8,28 +8,28 @@
 
     <div>
       <mat-label>Startdate and -time</mat-label>
-      <ejs-datetimepicker #start></ejs-datetimepicker>
+      <ejs-datetimepicker #start required></ejs-datetimepicker>
     </div>
 
     <div>
       <mat-label>Enddate and -time</mat-label>
-      <ejs-datetimepicker #end></ejs-datetimepicker>
+      <ejs-datetimepicker #end required></ejs-datetimepicker>
     </div>
 
     <mat-form-field class="example-full-width">
       <mat-label>Event Location</mat-label>
-      <input matInput #location required>
+      <input matInput #location>
     </mat-form-field>
 
     <mat-form-field class="example-full-width">
       <mat-label>Event Description</mat-label>
-      <textarea matInput #description required></textarea>
+      <textarea matInput #description></textarea>
     </mat-form-field>
 
     <mat-form-field appearance="fill">
       <mat-label>Choose a category</mat-label>
       <mat-select [(value)]="selectedValue">
-        <mat-option value="other">Other</mat-option>
+        <mat-option value="other" selected>Other</mat-option>
         <mat-option value="party">Party</mat-option>
         <mat-option value="activity">Activity</mat-option>
         <mat-option value="trip">Trip</mat-option>

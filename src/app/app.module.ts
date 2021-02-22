@@ -37,6 +37,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import {DatePipe} from '@angular/common';
 import { DateTimePickerModule } from '@syncfusion/ej2-angular-calendars';
 import { PersonalEventsComponent } from './personal-events/personal-events.component';
+import { HomeScreenComponent } from './home-screen/home-screen.component';
 
 registerLocaleData(localeDe, 'de');
 
@@ -49,6 +50,7 @@ registerLocaleData(localeDe, 'de');
     DeleteEventComponent,
     DetailEventComponent,
     PersonalEventsComponent,
+    HomeScreenComponent,
   ],
   imports: [
     BrowserModule,
