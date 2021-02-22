@@ -13,7 +13,6 @@ import { AddEventService } from '../add-event.service';
 export class AllEventsComponent implements OnInit {
   // todo Kommentare und nicht verwendetete Variablen entfernen
   events: Event[] = [];
-  public eventList: any;
   public eventDetail: Event;
 
   constructor(private http: HttpClient,
@@ -66,24 +65,13 @@ export class AllEventsComponent implements OnInit {
   async addToPersonalEvents(id): Promise<any>{
     await this.eventService.events.get(id).then(e => {
       console.log(e.start);
-      this.addEventService.add(e.title, e.start, e.end, e.location, e.description, e.category, e.image, e.type);
+      this.addEventService.add(e.title, e.start, e.end, e.location, e.description, e.type, e.image);
+        const addButton = document.getElementById('addButton') as HTMLElement;
+        addButton.innerText = "Added" ;
+
+
     });
   }
-
-
-  // ++++++++++++++++++++++++++++++++++++++++++++
-  // wenn wir dummy data aus der DB wollen
-  // ++++++++++++++++++++++++++++++++++++++++++++
-
-  // async getAllfromDB() {
-  //   await this.eventService.addData();
-  //   this.events = await this.eventService.getAll();
-  // }
-
-  // async addfromDB() {
-  //   await this.eventService.addData();
-  //   this.getAllfromDB();
-  // }
 
   // getAll(): void{
   //   this.eventList = this.getAllEventsFromJSON();

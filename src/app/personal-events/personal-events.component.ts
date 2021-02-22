@@ -37,25 +37,25 @@ export class PersonalEventsComponent implements OnInit {
     const image = document.getElementById('detail-image') as HTMLImageElement;
     switch (event.type) {
       case 'party':
-        image.src = event.image;
+        image.src = 'assets/event-pictures/party.jpg';
         break;
       case 'external':
         image.src = event.image;
         break;
       case 'other':
-        image.src = event.image;
+        image.src = 'assets/event-pictures/vacation.jpg';
         break;
       case 'activity':
-        image.src = event.image;
+        image.src = 'assets/event-pictures/activity.jpg';
         break;
       case 'trip':
-        image.src = event.image;
+        image.src = 'assets/event-pictures/trip.jpg';
         break;
       case 'private':
-        image.src = event.image;
+        image.src = 'assets/event-pictures/work-study.jpg';
         break;
       default:
-        image.src = event.image;
+        image.src = 'assets/event-pictures/default.jpg';
         break;
     }
 

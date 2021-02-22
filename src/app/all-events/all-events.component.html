@@ -64,7 +64,7 @@
 
       <mat-card-content id="detail-description"></mat-card-content>
        <mat-card-actions align="start">
-         <button (click)="addToPersonalEvents(eventDetail.id)">Add to personal Eventlist</button>
+         <button id="addButton"(click)="addToPersonalEvents(eventDetail.id)" #addButton>Add to personal Eventlist</button>
       </mat-card-actions>
     </mat-card>
   </mat-grid-tile>

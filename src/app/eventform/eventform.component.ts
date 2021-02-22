@@ -22,10 +22,8 @@ selectedValue = '';
             end: Date,
             location: string,
             description: string,
-            category: string,
-            image: string,
-            type: string): Promise<any>{
-    await this.addEventService.add(title, start, end, location, description, category, image, type);
+            category: string): Promise<any>{
+    await this.addEventService.add(title, start, end, location, description, category, '');
   }
 
 }
