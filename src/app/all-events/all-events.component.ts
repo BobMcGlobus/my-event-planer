@@ -2,7 +2,7 @@ import { EventService } from '../event.service';
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Event } from '../event';
-import {DatePipe} from '@angular/common';
+import { DatePipe } from '@angular/common';
 import { AddEventService } from '../add-event.service';
 
 @Component({
@@ -21,10 +21,10 @@ export class AllEventsComponent implements OnInit {
               private addEventService: AddEventService) {}
 
   ngOnInit(): void {
-    this.eventService.addData().then(() => this.getAllfromDB());
+    this.eventService.addData().then(() => this.getAllFromDB());
   }
 
-  async getAllfromDB(): Promise<any>{
+  async getAllFromDB(): Promise<any>{
     this.events = await this.eventService.getAll();
   }
 
