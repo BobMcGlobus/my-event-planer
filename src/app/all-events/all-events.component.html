@@ -17,14 +17,16 @@
                 <tr>
                   <td class="data">
                     <mat-icon aria-hidden="false">pin_drop</mat-icon>
-                    {{ event.location }}
+                    <span>{{ event.location }}</span>
                   </td>
                   <td class="data">
                     <mat-icon aria-hidden="false">calendar_today</mat-icon>
+                    <span>
                     {{ event.start | date: "short" }}
                     <div *ngIf="event.end">
                       - {{ event.end | date: "short" }}
                     </div>
+                      </span>
                   </td>
                 </tr>
                 </tbody>

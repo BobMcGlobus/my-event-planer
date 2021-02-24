@@ -1,5 +1,6 @@
 .mat-body{
 background-color: blue;
+
 }
 
 .mat-card {
@@ -9,8 +10,9 @@ background-color: blue;
   margin-top: 1rem;
   background: #ffffff;
   color: rgb(0, 0, 0);
-  border-radius: 1%;
+  border-radius: 11px;
   padding: 0px;
+  box-shadow: 0px 0px 20px 2px rgb(0 0 0 / 15%);
 }
 
 .mat-card-subtitle {
@@ -35,15 +37,23 @@ button:focus{
 }
 
 td{
-  padding-right: 50px;
+  padding-right: 30px;
+  border-radius: 11px 0 0 11px;
 }
-
+table tr {
+  display: flex;
+}
 table td .data
 {
+  display: flex;
+  align-items: center;
   table-layout:fixed;
   width:10rem;
   overflow:hidden;
   word-wrap:break-word;
+}
+.data mat-icon{
+  margin-right: 10px;
 }
 
 .mat-grid-tile .mat-figure {
@@ -72,7 +82,7 @@ table td .data
   margin-top: 2rem;
   background: #ffffff;
   color: rgb(0, 0, 0);
-  border-radius: 1%;
+  border-radius: 10px;
   padding: 16px;
 }
 
@@ -98,6 +108,30 @@ table td .data
   margin-left: 16px;
 }
 
+
+/* *********** */
+/* Dark */
+/* *********** */
+
+@media (prefers-color-scheme: dark) {
+  .mat-card, .mat-card.detail, button, .mat-card-subtitle {
+    background: #343434;
+    color: #ffffff;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  mat-grid-tile {
+    width: calc((100% - 0.5px) * 1 + 0px)!important;
+  }
+  mat-grid-tile#detail-card{
+  left: calc((100% - 0.5px + 1px) * 1)!important;
+  }
+  mat-grid-list{
+    overflow-y: hidden!important;
+  }
+
+}
 
 
 
