@@ -122,15 +122,23 @@ table td .data
 
 @media only screen and (max-width: 700px) {
   mat-grid-tile {
-    width: calc((100% - 0.5px) * 1 + 0px)!important;
+    width: calc((50% - 0.5px) * 1 + 0px)!important;
   }
   mat-grid-tile#detail-card{
-  left: calc((100% - 0.5px + 1px) * 1)!important;
+    left: calc((50% - 0.5px + 1px) * 1)!important;
   }
-  mat-grid-list{
-    overflow-y: hidden!important;
+ #scrollwrapper {
+    overflow-y: hidden;
   }
 
+  #event-grid {
+    width: 200%;
+    transform: translate(0, 0);
+    transition: transform 300ms ease;
+  }
+  #event-grid.mobileEventOpen {
+    transform: translate(-50%, 0);
+  }
 }
 
 

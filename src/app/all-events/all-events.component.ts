@@ -60,6 +60,7 @@ export class AllEventsComponent implements OnInit {
 
     const card = document.getElementById('detail-card') as HTMLElement;
     card.style.display = 'block';
+    this.mobileEventClass(true);
   }
 
   async addToPersonalEvents(id): Promise<any>{
@@ -72,6 +73,17 @@ export class AllEventsComponent implements OnInit {
 
     });
   }
+
+  mobileEventClass(con): void {
+
+    if (con) {
+      document.getElementById('event-grid').classList.add('mobileEventOpen');
+    }else{
+      document.getElementById('event-grid').classList.remove('mobileEventOpen');
+
+    }
+  }
+
 
   // getAll(): void{
   //   this.eventList = this.getAllEventsFromJSON();

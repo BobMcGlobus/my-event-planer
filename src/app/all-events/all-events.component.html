@@ -1,5 +1,4 @@
-
-<mat-grid-list cols="2" rowHeight="100%">
+<mat-grid-list cols="2" id="event-grid" rowHeight="100%">
   <mat-grid-tile>
     <div class="event-item3" *ngFor="let event of events">
       <mat-card id="click" (click)="getDetail(event)">
@@ -47,6 +46,7 @@
       </div>
 
       <mat-card-header>
+        <button (click)="mobileEventClass(false)">test</button>
         <mat-card-title id="detail-title"></mat-card-title>
         <mat-card-subtitle id="detail-subtitle" ></mat-card-subtitle>
       </mat-card-header>
