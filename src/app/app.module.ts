@@ -41,6 +41,7 @@ import { HomeScreenComponent } from './home-screen/home-screen.component';
 
 registerLocaleData(localeDe, 'de');
 
+
 @NgModule({
   declarations: [
     AppComponent,
