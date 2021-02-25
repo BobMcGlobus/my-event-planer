@@ -15,3 +15,54 @@
   top: 0;
   z-index: 1;
 }
+
+
+
+.menu {
+  z-index: 10;
+  display: flex;
+  flex-grow: 1;
+  height: 72px;
+  width: 100%;
+  border-radius: 11px 11px 0 0;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 0 1px 0 rgba(52, 46, 173, 0.25), 0 15px 30px 0 rgba(52, 46, 173, 0.1);
+  position: fixed;
+  bottom: 0;
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  text-decoration: none;
+}
+.menu-item:focus, .menu-item:hover {
+  outline: none;
+}
+
+.menu-item:focus .material-icons, .menu-item:hover .material-icons {
+  color: #c2185b;
+}
+.menu-item:focus .menu-item-label, .menu-item:hover .menu-item-label {
+  color: #c2185b;
+}
+
+.material-icons {
+  font-family: "Material Icons";
+  display: block;
+  margin-bottom: 4px;
+  font-size: 26px;
+  color: rgba(194, 24, 91, 0.74);
+  transition: 0.25s ease;
+}
+
+.menu-item-label {
+  display: block;
+  font-size: 13px;
+  color: rgba(194, 24, 91, 0.74);
+  transition: 0.25s ease;
+}
