@@ -6,6 +6,7 @@ background-color: blue;
   display: block;
   height: 100%;
   overflow-x: hidden;
+  padding-bottom: 72px;
 }
 .mat-card {
   width: 80%;
