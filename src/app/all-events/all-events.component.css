@@ -2,7 +2,11 @@
 background-color: blue;
 
 }
-
+#scrollwrapper {
+  display: block;
+  height: 100%;
+  overflow-x: hidden;
+}
 .mat-card {
   width: 80%;
   margin: auto;
@@ -130,11 +134,6 @@ table td .data
   }
   mat-grid-tile#detail-card{
     left: calc((50% - 0.5px + 1px) * 1)!important;
-  }
-#scrollwrapper {
-  overflow-x: hidden;
-  display: block;
-  height: 100%;
   }
 
   #event-grid {
