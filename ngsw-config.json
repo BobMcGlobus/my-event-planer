@@ -13,7 +13,10 @@
           "/index.html",
           "/manifest.webmanifest",
           "/*.css",
-          "/*.js"
+          "/*.js",
+          "/assets/event-pictures/*",
+          "/assets/event-pictures/external-events/*",
+          "/*.jpg"
         ]
       }
     },
