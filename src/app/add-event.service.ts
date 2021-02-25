@@ -24,9 +24,12 @@ export class AddEventService extends Dexie {
         description: string,
         type: string,
         image: string): Promise<any>{
-        
+
       const id: string = uuidv4();
-      this.router.navigate(['/events/my-events']);
+      if (this.router.url === '/events/new'){
+        this.router.navigate(['/events/my-events']);
+      }
+
       return this.events.add({id, title, start, end, location, description, type, image});
     }
 
