@@ -1,11 +1,22 @@
-<div>
+<div id="scrollwrapper">
+  <div class="card">
+    <div class="card-content">
   <h2>Hej, hello and Moin!</h2>
   <h3>Have a nice Day!</h3>
-  <p>hier müssen wir noch was tuuun, damit es gut aussieht</p>
+  <p>This Progressive Web App is part of a semester assignment of the lecture (ON19-4:T6+ON18-5:WT5):PWA at DHBW Mosbach.
+    It was developed by Katharina Barth (<a href="https://github.com/katathering">@katathering</a>), Anne Drotleff (<a href="https://github.com/anne-kd">@anne-kd</a>), Kristin Zenger (<a href="https://github.com/Kristin2000">@Kristin2000</a>), Livia Maxhaku (<a href="https://github.com/liviamxhk">@liviamxhk</a>) and Jonas Althoff (<a href="https://github.com/BobMcGlobus">@BobMcGlobus</a>).<br>
+    The code this project is based on is available on GitHub at <a href="https://github.com/BobMcGlobus/my-event-planer">https://github.com/BobMcGlobus/my-event-planer</a>.</p>
   <span>
+    <p>All functions at a glance:</p>
     <mat-nav-list>
-      <a mat-list-item routerLink="events/my-events">Check out all events</a>
+      <a mat-list-item routerLink="events/my-events">Check out - your events -></a>
+      <a mat-list-item routerLink="events/public-events">Check out - public events -></a>
+      <a mat-list-item routerLink="events/create-events">Make your own event -></a>
     </mat-nav-list>
+    <br>
+    <br>
   </span>
-  <button (click)="install()" id="btnInstall">Install</button>
+  <button mat-raised-button (click)="install()" id="btnInstall">Install this fancy PWA</button>
+    </div>
+  </div>
 </div>
