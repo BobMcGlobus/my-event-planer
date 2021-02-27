@@ -4,7 +4,7 @@
     <div class="event-item3" *ngFor="let event of events">
       <mat-card id="click" (click)="getDetail(event)">
         <table>
-          <td style="background-color: #605061"></td>
+          <td class="small-card-indicator"></td>
           <td style="padding: 16px">
             <mat-card-header>
               <mat-card-title>{{ event.title }}</mat-card-title>
@@ -41,13 +41,12 @@
 
   <mat-grid-tile id ="detail-card" style="display: none;" >
     <mat-card class="detail">
-
+      <div class="card-header" (click)="mobileEventClass(false)"><span class="material-icons">arrow_back_ios</span></div>
       <div id="detail-image-wrapper">
         <img matCardImage id="detail-image"src=""/>
       </div>
 
       <mat-card-header>
-        <button (click)="mobileEventClass(false)">test</button>
         <mat-card-title id="detail-title"></mat-card-title>
         <mat-card-subtitle id="detail-subtitle" ></mat-card-subtitle>
       </mat-card-header>

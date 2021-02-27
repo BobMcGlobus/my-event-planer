@@ -6,10 +6,15 @@ background-color: blue;
   display: block;
   height: 100%;
   overflow-x: hidden;
-  padding-bottom: 72px;
+  margin-bottom: 72px;
+}
+
+.small-card-indicator{
+  background-color: #605061;
+  width: 30px;
 }
 .mat-card {
-  width: 80%;
+  width: 90%;
   margin: auto;
   margin-bottom: 1rem;
   margin-top: 1rem;
@@ -52,7 +57,7 @@ table {
 table tr {
   display: flex;
 }
-table td .data
+table td.data
 {
   display: flex;
   align-items: center;
@@ -84,11 +89,26 @@ table td .data
 /* *********** */
 /* DETAIL */
 /* *********** */
+
+.card-header{
+  width: calc(100% + 32px);
+  height: 40px;
+  background-color: #605061;
+  margin: -16px -16px 0 -16px !important;
+  border-radius: 11px 11px 0 0;
+  align-items: center;
+  display: flex;
+
+}
+.card-header .material-icons{
+margin-left: 10px;
+}
+
 .mat-card.detail {
-  width: 70%;
+  width: 90%;
   margin: auto;
   margin-bottom: 1rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
   background: #ffffff;
   color: rgb(0, 0, 0);
   border-radius: 10px;
@@ -102,15 +122,15 @@ table td .data
 
 #detail-image-wrapper{
   max-height: 15rem;
-  margin: 0 auto;
   margin-bottom: 2rem;
+  margin: 0 -16px 20px -16px !important;
   overflow: hidden;
-  position: relative;
 }
 
 #detail-image{
-  position: relative;
-  transform: translateY(-25%);
+  margin: 0!important;
+  width: calc(100% + 32px);
+
 }
 
 #detail-table{
@@ -128,8 +148,12 @@ table td .data
     color: #ffffff;
   }
 }
-
-@media only screen and (max-width: 700px) {
+@media only screen and (min-width: 901px) {
+  .card-header .material-icons{
+    display: none;
+  }
+}
+@media only screen and (max-width: 900px) {
   mat-grid-tile {
     width: calc((50% - 0.5px) * 1 + 0px)!important;
   }
