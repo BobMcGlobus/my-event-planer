@@ -2,7 +2,7 @@
 <mat-grid-list cols="2" id="event-grid" rowHeight="100%">
   <mat-grid-tile>
     <div class="event-item3" *ngFor="let event of events">
-      <mat-card id="click" (click)="getDetail(event)">
+      <mat-card class="dark-light" id="click" (click)="getDetail(event)">
         <table>
           <td class="small-card-indicator"></td>
           <td style="padding: 16px">
@@ -40,8 +40,8 @@
   </mat-grid-tile>
 
   <mat-grid-tile id ="detail-card" style="display: none;" >
-    <mat-card class="detail">
-      <div class="card-header" (click)="mobileEventClass(false)"><span class="material-icons">arrow_back_ios</span></div>
+    <mat-card class="detail dark-light">
+      <div class="card-header dark-light-behaviour2" (click)="mobileEventClass(false)"><span class="material-icons">arrow_back_ios</span></div>
       <div id="detail-image-wrapper">
         <img matCardImage id="detail-image"src=""/>
       </div>

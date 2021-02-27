@@ -6,14 +6,10 @@
   height: 100%;
 }
 
-.mat-drawer-container{
-  background-color: #222222;
-}
-
 .mat-toolbar{
   background-color: white;
-  color: #c2185b;
   border-radius: 0 0 11px 11px;
+  color: #222222;
   box-shadow: 0 0 1px 0 rgba(52, 46, 173, 0.25), 0 15px 30px 0 rgba(52, 46, 173, 0.1);
 }
 
@@ -80,3 +76,12 @@
 .menu-item.active .material-icons, .menu-item.active .menu-item-label {
   color: #c2185b;
 }
+
+
+@media (prefers-color-scheme: dark) {
+  .mat-toolbar, .menu {
+    background: #343434;
+    color: #ffffff;
+  }
+}
+
