@@ -57,13 +57,13 @@
   display: block;
   margin-bottom: 4px;
   font-size: 26px;
-  color: rgb(232, 76, 186);
+  color: #343434;
   transition: 0.25s ease;
 }
 .menu-item-label {
   display: block;
   font-size: 13px;
-  color: rgb(232, 76, 186);
+  color: #343434;
   transition: 0.25s ease;
 }
 
@@ -81,6 +81,9 @@
 @media (prefers-color-scheme: dark) {
   .mat-toolbar, .menu {
     background: #343434;
+    color: #ffffff;
+  }
+  .menu-item-label, .material-icons{
     color: #ffffff;
   }
 }
