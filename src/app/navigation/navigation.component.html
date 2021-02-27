@@ -2,19 +2,19 @@
 
   <mat-sidenav-content>
     <nav class="menu">
-      <a routerLink="" class="menu-item">
-        <span class="material-icons">dns</span>
+      <a  routerLink="" class="menu-item">
+        <span class="material-icons">home</span>
         <span class="menu-item-label">Home</span>
       </a>
-      <a routerLink="events/my-events"class="menu-item">
-        <span class="material-icons">person</span>
+      <a [routerLinkActive]="['active']" routerLink="events/my-events"class="menu-item">
+        <span class="material-icons">dns</span>
         <span class="menu-item-label">My Events</span>
       </a>
-      <a routerLink="events/all" class="menu-item">
+      <a [routerLinkActive]="['active']" routerLink="events/all" class="menu-item">
         <span class="material-icons">explore</span>
         <span class="menu-item-label">Public Events</span>
       </a>
-      <a routerLink="events/new" class="menu-item">
+      <a [routerLinkActive]="['active']" routerLink="events/new" class="menu-item">
         <span class="material-icons">add_circle</span>
         <span class="menu-item-label">Create Event</span>
       </a>
