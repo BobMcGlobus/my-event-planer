@@ -1,16 +1,16 @@
-
-<mat-grid-list cols="2" rowHeight="100%">
+<div id="scrollwrapper">
+<mat-grid-list cols="2" id="event-grid" rowHeight="100%">
   <mat-grid-tile>
     <div class="event-item3" *ngFor="let event of privateEvent | async">
-      <mat-card id="click" (click)="getDetail(event)">
+      <mat-card class="dark-light" id="click" (click)="getDetail(event)">
         <table>
-          <td *ngIf="event.type == 'test-type'" style="background-color: #605061" #type></td>
-          <td *ngIf="event.type == 'trip'" style="background-color: #4F5F21" ></td>
-          <td *ngIf="event.type == 'activity'" style="background-color: #21485F" ></td>
-          <td *ngIf="event.type == 'other'" style="background-color: #E9B17D" ></td>
-          <td *ngIf="event.type == 'private'" style="background-color: #eeeeee" ></td>
-          <td *ngIf="event.type == 'party'" style="background-color: #D98B83" ></td>
-          <td *ngIf="event.type == 'external'" style="background-color: #605061" ></td>
+          <td *ngIf="event.type == 'test-type'" style="background-color: #605061" class="small-card-indicator" #type></td>
+          <td *ngIf="event.type == 'trip'" style="background-color: #4F5F21" class="small-card-indicator" ></td>
+          <td *ngIf="event.type == 'activity'" style="background-color: #21485F" class="small-card-indicator" ></td>
+          <td *ngIf="event.type == 'other'" style="background-color: #E9B17D" class="small-card-indicator" ></td>
+          <td *ngIf="event.type == 'private'" style="background-color: #eeeeee" class="small-card-indicator" ></td>
+          <td *ngIf="event.type == 'party'" style="background-color: #D98B83" class="small-card-indicator" ></td>
+          <td *ngIf="event.type == 'external'" style="background-color: #605061" class="small-card-indicator" ></td>
           <td style="padding: 16px">
             <mat-card-header>
               <mat-card-title>{{ event.title }}</mat-card-title>
@@ -44,8 +44,8 @@
   </mat-grid-tile>
 
   <mat-grid-tile id ="detail-card" style="display: none;" >
-    <mat-card class="detail">
-
+    <mat-card  class="detail dark-light">
+      <div class="card-header dark-light-behaviour2" (click)="mobileEventClass(false)"><span class="material-icons">arrow_back_ios</span></div>
       <div id="detail-image-wrapper">
         <img matCardImage id="detail-image"src="" #image/>
       </div>
@@ -70,11 +70,11 @@
 
       <mat-card-content id="detail-description" #description></mat-card-content>
       <mat-card-actions align="start">
-        <button (click)="delete(eventDetail.id)">Remove from Eventlist</button>
+        <button (click)="delete(eventDetail.id)">Remove from Eventlist <span class="material-icons">remove_circle</span></button>
       </mat-card-actions>
     </mat-card>
   </mat-grid-tile>
 </mat-grid-list>
-
+</div>
 
 

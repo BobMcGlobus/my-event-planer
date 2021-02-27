@@ -75,7 +75,6 @@ export class AllEventsComponent implements OnInit {
   }
 
   mobileEventClass(con): void {
-
     if (con) {
       document.getElementById('event-grid').classList.add('mobileEventOpen');
     }else{

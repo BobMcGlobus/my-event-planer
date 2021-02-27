@@ -119,6 +119,19 @@ margin-left: 10px;
   margin-left: 16px;
 }
 
+mat-card-actions button {
+   justify-content: center;
+   align-items: center;
+   display:flex;
+   color: #c2185b;
+  margin-left: auto;
+ }
+
+mat-card-actions button span {
+ font-size: 26px;
+  margin: 1rem;
+  color: #c2185b;
+}
 
 /* *********** */
 /* Dark */

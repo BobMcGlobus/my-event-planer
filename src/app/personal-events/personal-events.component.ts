@@ -76,6 +76,7 @@ export class PersonalEventsComponent implements OnInit {
 
     const card = document.getElementById('detail-card') as HTMLElement;
     card.style.display = 'block';
+    this.mobileEventClass(true);
   }
 
   delete(id: string): void{
@@ -89,4 +90,13 @@ export class PersonalEventsComponent implements OnInit {
     }
   }
 
+  mobileEventClass(con): void {
+
+    if (con) {
+      document.getElementById('event-grid').classList.add('mobileEventOpen');
+    }else{
+      document.getElementById('event-grid').classList.remove('mobileEventOpen');
+
+    }
+  }
 }

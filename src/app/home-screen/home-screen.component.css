@@ -23,3 +23,13 @@ a {
   text-decoration: none;
   color: #c2185b;
 }
+@media only screen and (min-width: 901px) {
+  .card {
+    width: 50%;
+  }
+}
+@media (prefers-color-scheme: light) {
+  .mat-list-base .mat-list-item{
+    color: #343434 !important;
+  }
+}
