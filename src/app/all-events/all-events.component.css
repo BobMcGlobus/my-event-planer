@@ -2,13 +2,6 @@
 background-color: blue;
 
 }
-#scrollwrapper {
-  display: block;
-  height: calc(100% - 72px);
-  overflow-x: hidden;
-  padding-bottom: 60px;
-}
-
 .small-card-indicator{
   background-color: #605061;
   width: 30px;
