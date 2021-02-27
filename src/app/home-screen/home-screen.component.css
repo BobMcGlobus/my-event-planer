@@ -12,6 +12,9 @@
   margin: 50px auto;
   width: 100%;
 }
+.card-content p, .card-content span{
+  font-family: Roboto;
+}
 
 .card-content button {
   display: flex;
