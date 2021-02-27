@@ -80,3 +80,48 @@ h3{
   }
 }
 
+.e-input-group.e-control-wrapper.e-datetime-wrapper{
+  border-color: rgba(198, 198, 198, 0.77) !important;
+}
+
+@media (prefers-color-scheme: light) {
+  .e-input-group.e-control-wrapper.e-datetime-wrapper{
+    border-color: #222222 !important;
+  }
+
+  /deep/ .mat-form-field .mat-input-element {
+    color: #222222 !important;
+  }
+
+  /deep/ .mat-form-field .mat-form-field-label {
+    color: #222222 !important;
+  }
+
+  /deep/ .mat-form-field-underline {
+    background-color: #222222 !important;
+  }
+
+  /deep/ .mat-form-field .mat-form-field-ripple {
+    background-color: #222222 !important;
+  }
+
+  /deep/ .mat-form-field-required-marker {
+    color: #222222 !important;
+  }
+
+  /deep/ .mat-form-field.mat-focused .mat-form-field-label {
+    color: #c2185b !important;
+  }
+
+  /deep/ .mat-form-field.mat-focused .mat-form-field-ripple {
+    background-color: #c2185b !important;
+  }
+
+  /deep/ .mat-form-field.mat-focused .mat-form-field-required-marker {
+    color: #c2185b !important;
+  }
+
+  /deep/ .mat-form-field.mat-focused .mat-input-element {
+    color: #c2185b !important;
+  }
+}
