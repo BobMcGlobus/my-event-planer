@@ -2,19 +2,3 @@
   <router-outlet></router-outlet>
 </app-navigation>
 
-<div class="ui mini menu">
-  <div class="right menu">
-    <div class="item">
-      <div class="ui button"
-        (click)="submitNotification()"
-        [ngClass]="{
-          'disabled': !permission,
-          'default':  permission === 'default',
-          'positive': permission === 'granted',
-          'negative': permission === 'denied'
-        }"
-      >Benachrichtigungen</div>
-    </div>
-  </div>
-</div>
-<router-outlet></router-outlet>

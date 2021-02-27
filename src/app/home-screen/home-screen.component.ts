@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HostListener } from '@angular/core';
+import { WebNotificationService } from 'src/app/web-notification.service';
 
 @Component({
   selector: 'app-home-screen',
@@ -8,11 +9,15 @@ import { HostListener } from '@angular/core';
 })
 export class HomeScreenComponent implements OnInit {
 
-  constructor() { }
+  permission: NotificationPermission | null = null;
+
+  constructor(
+    private webNotificationService: WebNotificationService
+  ) { }
 
   ngOnInit(): void {
+    this.permission = this.webNotificationService.isEnabled ? Notification.permission : null;
   }
-
 
   //adding a customized install button
   //code snippet (adapted) from https://levelup.gitconnected.com/pwa-add-button-to-home-screen-and-remote-debugging-in-android-devices-with-angular-8-3dbaec772a1
@@ -46,6 +51,12 @@ export class HomeScreenComponent implements OnInit {
       }
       this.deferredPrompt = null;
     });
+  }
+
+  //firering the submit to notification event after button click
+  submitNotification() {
+    this.webNotificationService.subscribeToNotifications()
+      .then(() => this.permission = Notification.permission);
   }
 
 }

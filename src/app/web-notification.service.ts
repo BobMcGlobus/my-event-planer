@@ -6,7 +6,9 @@ import { SwPush } from '@angular/service-worker';
   providedIn: 'root'
 })
 export class WebNotificationService {
+  //change to correct key!
   readonly VAPID_PUBLIC_KEY = 'BGk2Rx3DEjXdRv9qP8aKrypFoNjISAZ54l-3V05xpPOV-5ZQJvVH9OB9Rz5Ug7H_qH6CEr40f4Pi3DpjzYLbfCA';
+  //change to correct URL!
   private baseUrl = 'https://api3.angular-buch.com/notifications';
 
 
