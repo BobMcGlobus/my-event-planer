@@ -1,52 +1,53 @@
 <div id="scrollwrapper">
-<div class="dark-light" id="form-card">
-  <form class="example-form">
-    <h3>Neues Event hinzufügen</h3>
-    <mat-form-field class="example-full-width">
-      <mat-label>Event Titel</mat-label>
-      <input matInput #titel required>
-    </mat-form-field>
+  <div class="dark-light" id="form-card">
+    <form class="example-form">
+      <h3>Neues Event hinzufügen</h3>
+      <mat-form-field class="example-full-width">
+        <mat-label>Event Titel</mat-label>
+        <input matInput #titel required>
+      </mat-form-field>
 
-    <div>
-      <mat-label>Startdate and -time</mat-label>
-      <ejs-datetimepicker #start required></ejs-datetimepicker>
-    </div>
+      <div>
+        <mat-label>Startdate and -time</mat-label>
+        <ejs-datetimepicker #start required></ejs-datetimepicker>
+      </div>
 
-    <div>
-      <mat-label>Enddate and -time</mat-label>
-      <ejs-datetimepicker #end></ejs-datetimepicker>
-    </div>
+      <div>
+        <mat-label>Enddate and -time</mat-label>
+        <ejs-datetimepicker #end></ejs-datetimepicker>
+      </div>
 
-    <mat-form-field class="example-full-width">
-      <mat-label>Event Location</mat-label>
-      <input matInput #location required>
-    </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Event Location</mat-label>
+        <input matInput #location required>
+      </mat-form-field>
 
-    <mat-form-field class="example-full-width">
-      <mat-label>Event Description</mat-label>
-      <textarea matInput #description></textarea>
-    </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Event Description</mat-label>
+        <textarea matInput #description></textarea>
+      </mat-form-field>
 
-    <mat-form-field appearance="fill">
-      <mat-label>Choose a category</mat-label>
-      <mat-select [(value)]="selectedValue">
-        <mat-option value="other" selected>Other</mat-option>
-        <mat-option value="party">Party</mat-option>
-        <mat-option value="activity">Activity</mat-option>
-        <mat-option value="trip">Trip</mat-option>
-        <mat-option value="private">Private</mat-option>
-        <mat-option value="external" disabled>External</mat-option>
-      </mat-select>
-    </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Choose a category</mat-label>
+        <mat-select [(value)]="selectedValue">
+          <mat-option value="other" selected>Other</mat-option>
+          <mat-option value="party">Party</mat-option>
+          <mat-option value="activity">Activity</mat-option>
+          <mat-option value="trip">Trip</mat-option>
+          <mat-option value="private">Private</mat-option>
+          <mat-option value="external" disabled>External</mat-option>
+        </mat-select>
+      </mat-form-field>
 
-    <!-- <mat-checkbox>puplic Event</mat-checkbox> -->
+      <!-- <mat-checkbox>puplic Event</mat-checkbox> -->
 
-    <div  id="formbutton">
-      <button mat-raised-button
-      (click)="add(titel.value, start.value, end.value, location.value, description.value, selectedValue)"
-      >Save Event</button>
-    </div>
+      <div id="formbutton">
+        <button mat-raised-button
+                (click)="add(titel.value, start.value, end.value, location.value, description.value, selectedValue)"
+        >Save Event
+        </button>
+      </div>
 
-  </form>
-</div>
+    </form>
+  </div>
 </div>

@@ -3,7 +3,7 @@
   border-radius: 21px;
   width: 90%;
   padding: 10px 30px;
-  margin:1rem auto;
+  margin: 1rem auto;
 }
 
 .card-content {
@@ -12,7 +12,8 @@
   margin: 50px auto;
   width: 100%;
 }
-.card-content p, .card-content span{
+
+.card-content p, .card-content span {
   font-family: Roboto;
 }
 
@@ -26,13 +27,15 @@ a {
   text-decoration: none;
   color: var(--theme-color);
 }
+
 @media only screen and (min-width: 901px) {
   .card {
     width: 50%;
   }
 }
+
 @media (prefers-color-scheme: light) {
-  .mat-list-base .mat-list-item{
+  .mat-list-base .mat-list-item {
     color: var(--sec-dark-bg-color) !important;
   }
 }

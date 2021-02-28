@@ -1,7 +1,8 @@
-.small-card-indicator{
+.small-card-indicator {
   background-color: var(--indicator-color);
   width: 30px;
 }
+
 .mat-card {
   width: 90%;
   margin: auto;
@@ -25,30 +26,33 @@ button {
   text-transform: uppercase;
 }
 
-button:focus{
+button:focus {
   background-color: transparent;
   border: none;
 }
 
-td{
+td {
   padding-right: 30px;
   border-radius: 11px 0 0 11px;
 }
+
 table {
   display: flex;
 }
+
 table tr {
   display: flex;
 }
-table td.data
-{
+
+table td.data {
   display: flex;
   align-items: center;
-  table-layout:fixed;
-  overflow:hidden;
-  word-wrap:break-word;
+  table-layout: fixed;
+  overflow: hidden;
+  word-wrap: break-word;
 }
-.data mat-icon{
+
+.data mat-icon {
   margin-right: 10px;
 }
 
@@ -59,12 +63,12 @@ table td.data
   bottom: 0;
   position: absolute;
   align-items: center;
-  display: block!important;
+  display: block !important;
   justify-content: center;
   height: 100%;
   padding: 0;
   margin: 0;
-  padding-top:0;
+  padding-top: 0;
 }
 
 
@@ -72,7 +76,7 @@ table td.data
 /* DETAIL */
 /* *********** */
 
-.card-header{
+.card-header {
   width: calc(100% + 32px);
   height: 40px;
   background-color: var(--indicator-color);
@@ -82,7 +86,8 @@ table td.data
   display: flex;
 
 }
-.card-header .material-icons{
+
+.card-header .material-icons {
   margin-left: 10px;
 }
 
@@ -100,31 +105,31 @@ table td.data
   margin: 16px;
 }
 
-#detail-date, #detail-date-end{
+#detail-date, #detail-date-end {
   margin-right: 0.5rem;
 }
 
-#detail-image-wrapper{
+#detail-image-wrapper {
   max-height: 15rem;
   margin-bottom: 2rem;
   margin: 0 -16px 20px -16px !important;
   overflow: hidden;
 }
 
-#detail-image{
-  margin: 0!important;
+#detail-image {
+  margin: 0 !important;
   width: calc(100% + 32px);
 
 }
 
-#detail-table{
+#detail-table {
   margin-left: 16px;
 }
 
 mat-card-actions button {
   justify-content: center;
   align-items: center;
-  display:flex;
+  display: flex;
   margin-left: auto;
   color: var(--theme-color);
 }
@@ -141,16 +146,18 @@ mat-card-actions button span {
 
 
 @media only screen and (min-width: 901px) {
-  .card-header .material-icons{
+  .card-header .material-icons {
     display: none;
   }
 }
+
 @media only screen and (max-width: 900px) {
   mat-grid-tile {
-    width: calc((50% - 0.5px) * 1 + 0px)!important;
+    width: calc((50% - 0.5px) * 1 + 0px) !important;
   }
-  mat-grid-tile#detail-card{
-    left: calc((50% - 0.5px + 1px) * 1)!important;
+
+  mat-grid-tile#detail-card {
+    left: calc((50% - 0.5px + 1px) * 1) !important;
   }
 
   #event-grid {
@@ -158,6 +165,7 @@ mat-card-actions button span {
     transform: translate(0, 0);
     transition: transform 300ms ease;
   }
+
   #event-grid.mobileEventOpen {
     transform: translate(-50%, 0);
   }

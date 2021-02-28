@@ -1,12 +1,11 @@
 <mat-sidenav-container class="sidenav-container">
-
   <mat-sidenav-content>
     <nav class="menu">
-      <a  routerLink="" class="menu-item">
+      <a routerLink="" class="menu-item">
         <span class="material-icons">home</span>
         <span class="menu-item-label">Home</span>
       </a>
-      <a [routerLinkActive]="['active']" routerLink="events/my-events"class="menu-item">
+      <a [routerLinkActive]="['active']" routerLink="events/my-events" class="menu-item">
         <span class="material-icons">dns</span>
         <span class="menu-item-label">My Events</span>
       </a>
@@ -31,8 +30,6 @@
       <span class="accent">Event </span><span> Planer</span>
     </mat-toolbar>
     <!-- Add Content Here -->
-
-
     <ng-content></ng-content>
   </mat-sidenav-content>
 </mat-sidenav-container>

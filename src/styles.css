@@ -7,6 +7,7 @@
 @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-calendars/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-angular-calendars/styles/material.css';
+
 :root {
   --main-dark-bg-color: #222222;
   --sec-dark-bg-color: #343434;
@@ -15,38 +16,52 @@
   --main-light-bg-color: #F1F1F1;
   --sec-light-bg-color: #FFFFFF;
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
 #scrollwrapper {
   display: block;
   height: calc(100% - 72px);
   overflow-x: hidden;
   padding-bottom: 60px;
 }
+
 .accent {
   color: var(--theme-color);
 }
-.mat-drawer-container{
+
+.mat-drawer-container {
   background-color: var(--main-light-bg-color);
 }
-.dark-light{
+
+.dark-light {
   background-color: var(--sec-light-bg-color);
   color: var(--main-dark-bg-color);
 }
-.dark-light-behaviour2{
+
+.dark-light-behaviour2 {
   background-color: var(--sec-dark-bg-color);
   color: var(--sec-light-bg-color);
 }
 
 @media (prefers-color-scheme: dark) {
-  .mat-drawer-container{
+  .mat-drawer-container {
     background-color: var(--main-dark-bg-color);
   }
-  .dark-light{
+
+  .dark-light {
     background-color: var(--sec-dark-bg-color);
     color: var(--sec-light-bg-color);
   }
-  label{
+
+  label {
     color: var(--sec-light-bg-color);
   }
 }

@@ -4,10 +4,10 @@
   width: 90%;
   height: calc(100% - 2rem);
   padding: 10px 30px;
-  margin:1rem auto;
+  margin: 1rem auto;
 }
 
-h3{
+h3 {
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
@@ -39,33 +39,41 @@ h3{
   align-items: flex-end;
   justify-content: flex-end;
 }
-#formbutton button{
+
+#formbutton button {
   background-color: var(--theme-color);;
 }
-.category-container{
+
+.category-container {
   width: 100%;
   display: flex;
   justify-content: space-evenly;
 }
-.category-selector{
+
+.category-selector {
   width: 42px;
   height: 44px;
   left: 68px;
   top: 566px;
   border-radius: 11px;
 }
+
 .category-selector.orange {
   background-color: #E9B17D;
 }
+
 .category-selector.red {
   background-color: #D98B83;
 }
+
 .category-selector.purple {
   background-color: #605061;
 }
+
 .category-selector.blue {
   background-color: #21485F;
 }
+
 .category-selector.green {
   background-color: #4F5F21;
 }
@@ -80,12 +88,12 @@ h3{
   }
 }
 
-.e-input-group.e-control-wrapper.e-datetime-wrapper{
+.e-input-group.e-control-wrapper.e-datetime-wrapper {
   border-color: rgba(198, 198, 198, 0.77) !important;
 }
 
 @media (prefers-color-scheme: light) {
-  .e-input-group.e-control-wrapper.e-datetime-wrapper{
+  .e-input-group.e-control-wrapper.e-datetime-wrapper {
     border-color: var(--main-dark-bg-color) !important;
   }
 

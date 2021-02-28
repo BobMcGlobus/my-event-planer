@@ -1,76 +1,80 @@
 <div id="scrollwrapper">
-<mat-grid-list cols="2" id="event-grid" rowHeight="100%">
-  <mat-grid-tile>
-    <div class="event-item3" *ngFor="let event of events">
-      <mat-card class="dark-light" id="click" (click)="getDetail(event)">
-        <table>
-          <td class="small-card-indicator"></td>
-          <td style="padding: 16px">
-            <mat-card-header>
-              <mat-card-title>{{ event.title }}</mat-card-title>
-              <mat-card-subtitle>{{ event.type }}</mat-card-subtitle>
-            </mat-card-header>
-            <mat-card-content>
-              <p>{{ event.description | slice: 0:150 }}... <br /><br /></p>
-              <table>
-                <tbody>
-                <tr>
-                  <td class="data">
-                    <mat-icon aria-hidden="false">pin_drop</mat-icon>
-                    <span>{{ event.location }}</span>
-                  </td>
-                  <td class="data">
-                    <mat-icon aria-hidden="false">calendar_today</mat-icon>
-                    <span>
+  <mat-grid-list cols="2" id="event-grid" rowHeight="100%">
+    <mat-grid-tile>
+      <div class="event-item3" *ngFor="let event of events">
+        <mat-card class="dark-light" id="click" (click)="getDetail(event)">
+          <table>
+            <td class="small-card-indicator"></td>
+            <td style="padding: 16px">
+              <mat-card-header>
+                <mat-card-title>{{ event.title }}</mat-card-title>
+                <mat-card-subtitle>{{ event.type }}</mat-card-subtitle>
+              </mat-card-header>
+              <mat-card-content>
+                <p>{{ event.description | slice: 0:150 }}... <br/><br/></p>
+                <table>
+                  <tbody>
+                  <tr>
+                    <td class="data">
+                      <mat-icon aria-hidden="false">pin_drop</mat-icon>
+                      <span>{{ event.location }}</span>
+                    </td>
+                    <td class="data">
+                      <mat-icon aria-hidden="false">calendar_today</mat-icon>
+                      <span>
                     {{ event.start | date: "short" }}
-                    <div *ngIf="event.end">
+                        <div *ngIf="event.end">
                       - {{ event.end | date: "short" }}
                     </div>
                       </span>
-                  </td>
-                </tr>
-                </tbody>
-              </table>
-            </mat-card-content>
-            <mat-card-footer></mat-card-footer>
-          </td>
-        </table>
-      </mat-card>
-    </div>
-  </mat-grid-tile>
-
-  <mat-grid-tile id ="detail-card" style="display: none;" >
-    <mat-card class="detail dark-light">
-      <div class="card-header dark-light-behaviour2" (click)="mobileEventClass(false)"><span class="material-icons">arrow_back_ios</span></div>
-      <div id="detail-image-wrapper">
-        <img matCardImage id="detail-image"src=""/>
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+              </mat-card-content>
+              <mat-card-footer></mat-card-footer>
+            </td>
+          </table>
+        </mat-card>
       </div>
+    </mat-grid-tile>
 
-      <mat-card-header>
-        <mat-card-title id="detail-title"></mat-card-title>
-        <mat-card-subtitle id="detail-subtitle" ></mat-card-subtitle>
-      </mat-card-header>
+    <mat-grid-tile id="detail-card" style="display: none;">
+      <mat-card class="detail dark-light">
+        <div class="card-header dark-light-behaviour2" (click)="mobileEventClass(false)"><span class="material-icons">arrow_back_ios</span>
+        </div>
+        <div id="detail-image-wrapper">
+          <img matCardImage id="detail-image" src=""/>
+        </div>
 
-      <table id="detail-table">
-        <tbody>
-        <tr>
-          <td class="data" >
-            <mat-icon aria-hidden="false">pin_drop</mat-icon><span>&nbsp;&nbsp;</span><span id="detail-location"></span>
-          </td>
-          <td class="data" >
-            <mat-icon aria-hidden="false">calendar_today</mat-icon><span>&nbsp;&nbsp;</span><span id="detail-date"></span><span id="detail-date-end" #end></span>
-          </td>
-        </tr>
-        </tbody>
-      </table>
+        <mat-card-header>
+          <mat-card-title id="detail-title"></mat-card-title>
+          <mat-card-subtitle id="detail-subtitle"></mat-card-subtitle>
+        </mat-card-header>
 
-      <mat-card-content id="detail-description"></mat-card-content>
-       <mat-card-actions align="start">
-         <button id="addButton"(click)="addToPersonalEvents(eventDetail.id)" #addButton>Add to personal Eventlist <span class="material-icons">add_circle</span></button>
-      </mat-card-actions>
-    </mat-card>
-  </mat-grid-tile>
-</mat-grid-list>
+        <table id="detail-table">
+          <tbody>
+          <tr>
+            <td class="data">
+              <mat-icon aria-hidden="false">pin_drop</mat-icon>
+              <span>&nbsp;&nbsp;</span><span id="detail-location"></span>
+            </td>
+            <td class="data">
+              <mat-icon aria-hidden="false">calendar_today</mat-icon>
+              <span>&nbsp;&nbsp;</span><span id="detail-date"></span><span id="detail-date-end" #end></span>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+
+        <mat-card-content id="detail-description"></mat-card-content>
+        <mat-card-actions align="start">
+          <button id="addButton" (click)="addToPersonalEvents(eventDetail.id)" #addButton>Add to personal Eventlist
+            <span class="material-icons">add_circle</span></button>
+        </mat-card-actions>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
 </div>
 
 
