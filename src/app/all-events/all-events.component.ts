@@ -55,7 +55,7 @@ export class AllEventsComponent implements OnInit {
     if (event.end){
       const dateEnd = document.getElementById('detail-date-end') as HTMLElement;
       const dateTimeEnd = this.datePipe.transform(event.start, 'short');
-      dateEnd.innerHTML = ' - ' + dateTimeEnd;
+      dateEnd.innerHTML = dateTimeEnd;
     }
 
     const card = document.getElementById('detail-card') as HTMLElement;

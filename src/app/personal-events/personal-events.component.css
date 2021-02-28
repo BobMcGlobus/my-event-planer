@@ -33,7 +33,6 @@ button:focus{
 td{
   padding-right: 30px;
   border-radius: 11px 0 0 11px;
-  width: 100%;
 }
 table {
   display: flex;
@@ -46,7 +45,6 @@ table td.data
   display: flex;
   align-items: center;
   table-layout:fixed;
-  width:10rem;
   overflow:hidden;
   word-wrap:break-word;
 }
@@ -100,6 +98,10 @@ table td.data
 .mat-card-footer {
   display: block;
   margin: 16px;
+}
+
+#detail-date, #detail-date-end{
+  margin-right: 0.5rem;
 }
 
 #detail-image-wrapper{
