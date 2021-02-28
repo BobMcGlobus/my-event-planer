@@ -19,12 +19,12 @@
 .card-content button {
   display: flex;
   width: 200px;
-  background-color: #c2185b;
+  background-color: var(--theme-color);
 }
 
 a {
   text-decoration: none;
-  color: #c2185b;
+  color: var(--theme-color);
 }
 @media only screen and (min-width: 901px) {
   .card {
@@ -33,6 +33,6 @@ a {
 }
 @media (prefers-color-scheme: light) {
   .mat-list-base .mat-list-item{
-    color: #343434 !important;
+    color: var(--sec-dark-bg-color) !important;
   }
 }

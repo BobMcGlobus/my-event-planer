@@ -13,7 +13,7 @@ h3{
   font-weight: normal;
   font-size: 16px;
   line-height: 19px;
-  color: #c2185b;
+  color: var(--theme-color);;
 }
 
 
@@ -40,7 +40,7 @@ h3{
   justify-content: flex-end;
 }
 #formbutton button{
-  background-color: #c2185b;
+  background-color: var(--theme-color);;
 }
 .category-container{
   width: 100%;
@@ -86,42 +86,42 @@ h3{
 
 @media (prefers-color-scheme: light) {
   .e-input-group.e-control-wrapper.e-datetime-wrapper{
-    border-color: #222222 !important;
+    border-color: var(--main-dark-bg-color) !important;
   }
 
   /deep/ .mat-form-field .mat-input-element {
-    color: #222222 !important;
+    color: var(--main-dark-bg-color) !important;
   }
 
   /deep/ .mat-form-field .mat-form-field-label {
-    color: #222222 !important;
+    color: var(--main-dark-bg-color) !important;
   }
 
   /deep/ .mat-form-field-underline {
-    background-color: #222222 !important;
+    background-color: var(--main-dark-bg-color) !important;
   }
 
   /deep/ .mat-form-field .mat-form-field-ripple {
-    background-color: #222222 !important;
+    background-color: var(--main-dark-bg-color) !important;
   }
 
   /deep/ .mat-form-field-required-marker {
-    color: #222222 !important;
+    color: var(--main-dark-bg-color) !important;
   }
 
   /deep/ .mat-form-field.mat-focused .mat-form-field-label {
-    color: #c2185b !important;
+    color: var(--theme-color) !important;
   }
 
   /deep/ .mat-form-field.mat-focused .mat-form-field-ripple {
-    background-color: #c2185b !important;
+    background-color: var(--theme-color) !important;
   }
 
   /deep/ .mat-form-field.mat-focused .mat-form-field-required-marker {
-    color: #c2185b !important;
+    color: var(--theme-color) !important;
   }
 
   /deep/ .mat-form-field.mat-focused .mat-input-element {
-    color: #c2185b !important;
+    color: var(--theme-color) !important;
   }
 }
